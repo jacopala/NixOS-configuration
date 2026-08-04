@@ -18,22 +18,43 @@
   time.timeZone = "America/Chicago";
 
   # X11 + QTile
-  services.xserver = {
+  #services.xserver = {
+  #  enable = true;
+  #  autoRepeatDelay = 100;
+  #  autoRepeatInterval = 30;
+  #  windowManager.qtile.enable = true;
+  #};
+  #services.displayManager.ly.enable = true;
+
+  # Sway Window Manager
+  services.sway = {
     enable = true;
-    autoRepeatDelay = 100;
-    autoRepeatInterval = 30;
-    windowManager.qtile.enable = true;
+    extraPackages = with pkgs; [
+      ## APPLICATIONS
+      alacritty       # Terminal 
+      wofi            # Menu
+      swaybg          # Wallpaper
+      greetd.wlgreet  # Greeter
+      qs              # Widget toolkit
+      dunst           # Notifications
+      swaylock        # Lockscreen
+      ## SYSTEM
+      brightnessctl   # Brightness
+      pulseaudio      # Audio
+      wl-clipboard    # Copy/Paste ext.
+    ];
   };
-  services.displayManager.ly.enable = true;
+  # Wayland + X11 compatability
+  programs.xwayland.enable = true;
 
   # Pipewire audio
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+  #services.pipewire = {
+  #  enable = true;
+  #  pulse.enable = true;
+  #};
 
   # Touchpad support (default for most desktopManagers)
-  services.libinput.enable = true;
+  #services.libinput.enable = true;
 
   users.users.jacob = {
     isNormalUser = true;
@@ -47,7 +68,9 @@
   programs.firefox.enable = true;
 
   # Essential packages
+  # Minimal # of packages for all users to share
   environment.systemPackages = with pkgs; [
+    gcc
     vim
     wget
     git
