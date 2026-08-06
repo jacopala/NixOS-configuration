@@ -4,9 +4,11 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 
   configs = {
-    nvim = "nvim";
+    sway = "sway";
     alacritty = "alacritty";
+    nvim = "nvim";
     rofi = "rofi";
+    wofi = "rofi";
   };
 in
 {
@@ -18,6 +20,7 @@ in
 		enable = true;
     initExtra = ''
       export PS1="[ \\[\\e[38;5;4m\\]\w\\[\\e[0m\\] ]\\n\\[\\e[0m\\]\\$ "
+      cd /home/jacob
     '';
 	};
 
