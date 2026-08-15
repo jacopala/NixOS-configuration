@@ -4,10 +4,13 @@ let
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   # Link config files in ./cfgs
   configs = {
-    sway = "sway";
     alacritty = "alacritty";
+    fuzzel = "fuzzel";
     nvim = "nvim";
+    quickshell = "quickshell";
+    sway = "sway";
     wofi = "wofi";
+    yazi = "yazi";
   };
 in
 {
@@ -17,9 +20,10 @@ in
     alacritty       # Terminal 
     cheese          # Camera
     fuzzel          # Launcher
-    obsidian        # Knowledge base
-    quickshell      # Widget toolkit
+    obsidian        # Notes
+    quickshell      # Widgets
     swaybg          # Wallpaper
+    vlc             # Media player
     wofi            # Menu
     yazi            # File Manager
 
@@ -47,6 +51,7 @@ in
 		enable = true;
     initExtra = ''
       export PS1="[ \\[\\e[38;5;4m\\]\w\\[\\e[0m\\] ]\\n\\[\\e[0m\\]\\$ "
+      export YAZI_CONFIG_HOME="${dotfiles}"
     '';
 	};
   

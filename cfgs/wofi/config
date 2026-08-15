@@ -1,13 +1,16 @@
 mode=drun
-height=50%
+term=alacritty
+height=30%
 width=15%
 allow_images=true
+# sink into left side of screen
 location=left
-prompt=
+xoffset=-20px
+prompt=Search
 normal_window=false
 no_actions=true
-hide-scroll=true
-hide-search=true
+hide_scroll=true
+hide_search=false
 
-content_halign=left
+halign=center
 valign=center

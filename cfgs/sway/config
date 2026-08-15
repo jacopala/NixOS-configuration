@@ -10,8 +10,7 @@ set $term alacritty     # Terminal
 set $menu wofi          # Launcher
 
 # Wallpaper
-#output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg '#9d8189' solid_color
+output * background ./bgs/meowl_windows.png fill
 
 # Monitors
 # swaymsg -t get_outputs
