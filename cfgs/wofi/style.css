@@ -1,0 +1,64 @@
+* {
+    background-color: transparent;
+    border-radius: 12px;
+    font-family: "Departure Mono Nerd Font";
+    font-size: 20px;
+    max-width: 100%;
+}
+/* Background */
+#window {
+    max-width: 100%;
+}
+#inner-box {
+    padding: 3px 0px;
+    max-width: 50%;
+}
+#outer-box {
+    background-color: rgba(53,60,83,0.9);
+    padding: 10px 10px;
+    max-width: 100%;
+}
+/* Entries */
+#entry{
+    background-color: rgba(66,70,145,0.8);
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.5);
+    margin: 3px 3px;
+}
+#entry:selected {
+    background-color: rgba(111,103,203,1);
+    outline: none;
+}
+#entry #text {
+    color: rgba(255,124,166,1);
+    text-shadow: 0px 0px 0px rgba(0,0,0,0);
+    transition: color 0.2s ease, text-shadow 0.4s ease;
+    max-width: 100%;
+}
+#entry:selected #text {
+    color: rgba(239,222,143,1);
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.7);
+}
+/* Icons */
+#img {
+    -gtk-icon-transform:scale(1.3);
+    background-color: rgba(111,103,203,0.7);
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.7);
+    margin: 10px;
+    display: block;
+    margin-right: 25px;
+}
+/* Search */
+#input {
+    margin: 5px;
+    background-color: rgba(239,222,143,1);
+    border-color: transparent;
+}
+#input > image {
+    -gtk-icon-transform:scaleX(0);
+    display: none;
+}
+/* Scrollbar fallback */
+#scroll, #scrollbar {
+    border: red;
+}

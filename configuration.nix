@@ -16,23 +16,13 @@
     enable = true;
     xwayland.enable = true;
     extraPackages = with pkgs; [
-      ## APPLICATIONS
-      alacritty       # Terminal 
-      wofi            # Menu
-      swaybg          # Wallpaper
-      wlgreet         # Greeter
-      quickshell      # Widget toolkit
-      dunst           # Notifications
-      swaylock        # Lockscreen
-
-      ## SYSTEM
       brightnessctl   # Brightness
       pulseaudio      # Audio
       wl-clipboard    # Clipboard ext.
     ];
   };
 
-  #Pipewire audio
+  # Pipewire audio
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -44,15 +34,16 @@
   # Browser
   programs.firefox.enable = true;
 
+  # Tailscale
+  services.tailscale.enable = true;
+
   ### SYSTEM PACKAGES
 
   # System packages
   environment.systemPackages = with pkgs; [
-    gcc
-    vim
-    wget
-    git
-    alacritty
+    	gcc
+	    git
+    	vim
   ];
 
   # Fonts
@@ -64,12 +55,12 @@
     nerd-fonts.symbols-only   # fallback symbol font for others
   ];
 
-  # Allowed unfree packages
+  # Allowed unfree/licensed packages
   nixpkgs.config.allowUnfreePackages = [
     "obsidian"
   ];
 
-  ### SYSTEM CONFIG
+  ### SYSTEM SETTINGS
   imports =
     [
       ./hardware-configuration.nix

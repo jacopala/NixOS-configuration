@@ -1,0 +1,13 @@
+mode=drun
+height=50%
+width=15%
+allow_images=true
+location=left
+prompt=
+normal_window=false
+no_actions=true
+hide-scroll=true
+hide-search=true
+
+content_halign=left
+valign=center

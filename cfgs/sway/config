@@ -6,8 +6,8 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty         # Terminal
-set $menu wofi --show drun  # Launcher
+set $term alacritty     # Terminal
+set $menu wofi          # Launcher
 
 # Wallpaper
 #output * bg /run/current-system/sw/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
@@ -127,7 +127,7 @@ mode "resize" {
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
-gaps inner 30
-gaps outer 30
+gaps inner 0
+gaps outer 0
 smart_gaps on
 default_border pixel 3
