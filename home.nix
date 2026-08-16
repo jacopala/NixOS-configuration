@@ -55,6 +55,7 @@ in
       export PS1="[ \\[\\e[38;5;4m\\]\w\\[\\e[0m\\] ]\\n\\[\\e[0m\\]\\$ "
       alias yz="yazi"
       alias ls="eza --icons"
+      export PATH="$HOME/NixOS/scripts/:$PATH"     
     '';
 	};
   

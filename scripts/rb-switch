@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
 # Automates the usage of rebuild&switching using param for flake commits
-if [[ $# != 1 ]]; then
-    echo "Usage: $0 COMMIT_MSG" 
-else
-    printf "\n%s\n" "$1"
-    read -t 15 -n 1 -p "\nConfirm commit message?(Y/y)" confirm
-    echo
+cd ~/NixOS/
+clear
+echo "Current changes:"
+git diff -w --stat
+printf "\nEnter commit message below (Ctrl+D to finish):\n"
+commitmsg=""
+while IFS= read -r line < /dev/tty; do
+    commitmsg+="$line"$'\n'
+done
 
-    if [[ $confirm == "y" || $confirm == "Y" ]]; then
-        cd ~/NixOS || exit 1
-        git add .
-        git commit -m "$1"
-        sudo nixos-rebuild switch --flake ~/NixOS#nixos-btw
-        nix-env --delete-generations +5
-    fi
+clear
+printf "Confirm message:\n\n$commitmsg\n"
+read -t 15 -n 1 -p "Does this look right?(Y/y) " confirm
+printf "\n\n"
+
+if [[ $confirm == "y" || $confirm == "Y" ]]; then
+    cd ~/NixOS || exit 1
+    git add .
+    git commit -m "$commitmsg"
+    sudo nixos-rebuild switch --flake ~/NixOS#nixos-btw
+    nix-env --delete-generations +5
 fi
