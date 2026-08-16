@@ -1,7 +1,1 @@
-# Activate Linux
-
-A parody of the activate windows watermark on windows.
-
-You can run the watermark with `quickshell -p shell.qml`.
-
-![](./image.png)
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/activate_linux/README.md

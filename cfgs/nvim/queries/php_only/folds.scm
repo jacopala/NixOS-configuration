@@ -1,17 +1,1 @@
-[
-  (if_statement)
-  (switch_statement)
-  (while_statement)
-  (do_statement)
-  (for_statement)
-  (foreach_statement)
-  (try_statement)
-  (function_definition)
-  (class_declaration)
-  (interface_declaration)
-  (trait_declaration)
-  (enum_declaration)
-  (function_static_declaration)
-  (method_declaration)
-  (namespace_use_declaration)+
-] @fold
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/queries/php_only/folds.scm

@@ -1,7 +1,1 @@
-# Audio mixer
-
-This is a simple audio mixer built with the pipewire API.
-
-You can run the mixer with `quickshell -p shell.qml`.
-
-![](./image.png)
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/mixer/README.md

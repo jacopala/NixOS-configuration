@@ -1,6 +1,1 @@
-# Focus following panel
-
-This is a hyprland specific panel that follows monitor focus using the hyprland
-unix socket for events. To run it you will need to be using hyprland.
-
-You can run the panel with `quickshell -p shell.qml`.
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/focus_following_panel/README.md

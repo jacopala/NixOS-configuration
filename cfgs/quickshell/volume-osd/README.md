@@ -1,7 +1,1 @@
-# Volume OSD
-
-This is a simple overlay that shows the system volume when it changes using pipewire.
-
-You can run the overlay with `qs -p shell.qml`.
-
-![](./image.png)
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/volume-osd/README.md

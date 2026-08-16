@@ -1,16 +1,1 @@
-mode=drun
-term=alacritty
-height=30%
-width=15%
-allow_images=true
-# sink into left side of screen
-location=left
-xoffset=-20px
-prompt=Search
-normal_window=false
-no_actions=true
-hide_scroll=true
-hide_search=false
-
-#halign=center
-valign=center
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/wofi/config

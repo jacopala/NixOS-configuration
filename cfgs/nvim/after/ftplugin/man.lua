@@ -1,8 +1,1 @@
-local set = vim.opt_local
-set.number = true
-set.relativenumber = true
-set.number = true
-set.relativenumber = false
-set.wrap = true
-set.linebreak = true
-set.conceallevel = 0
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/after/ftplugin/man.lua

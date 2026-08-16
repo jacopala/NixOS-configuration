@@ -1,6 +1,1 @@
-vim.cmd.colorscheme("tokyonight")
-vim.cmd("hi Directory guibg=NONE")
-vim.cmd("hi SignColumn guibg=NONE")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-vim.api.nvim_set_hl(0, "LineNr", { bg = "none" })
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/after/plugin/colors.lua

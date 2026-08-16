@@ -1,9 +1,1 @@
-local set = vim.opt_local
-
-set.shiftwidth = 2
-set.tabstop = 2
-set.softtabstop = 2
-set.expandtab = true
-
-set.number = true
-set.relativenumber = true
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/after/ftplugin/jsonc.lua

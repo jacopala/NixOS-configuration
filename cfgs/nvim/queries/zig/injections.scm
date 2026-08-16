@@ -1,10 +1,1 @@
-((comment) @injection.content
-  (#set! injection.language "comment"))
-
-; TODO: add when asm is added
-; (asm_output_item (string) @injection.content
-;   (#set! injection.language "asm"))
-; (asm_input_item (string) @injection.content
-;   (#set! injection.language "asm"))
-; (asm_clobbers (string) @injection.content
-;   (#set! injection.language "asm"))
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/queries/zig/injections.scm

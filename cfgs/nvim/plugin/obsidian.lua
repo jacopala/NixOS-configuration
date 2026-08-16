@@ -1,17 +1,1 @@
-local status, obsiain = pcall(require, "obsidian")
-if not status then
-    return
-end
-
-obsidian.setup({
-    workspaces = {
-        {
-            name = "obsidian vault",
-            path = "~/Obsidian/",
-        },
-    },
-    completion = {
-        nvim_cmp = true,
-        min_chars = 2,
-    },
-})
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/plugin/obsidian.lua

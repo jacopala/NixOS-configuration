@@ -1,12 +1,1 @@
-[
-  (do_statement)
-  (while_statement)
-  (repeat_statement)
-  (if_statement)
-  (for_statement)
-  (function_declaration)
-  (function_definition)
-  (parameters)
-  (arguments)
-  (table_constructor)
-] @fold
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/queries/lua/folds.scm

@@ -1,7 +1,1 @@
-# Wlogout clone
-
-This is a mostly faithful clone of [wlogout](https://github.com/ArtsyMacaw/wlogout).
-
-You can run the example with `quickshell -p shell.qml`.
-
-![](./image.png)
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/wlogout/README.md

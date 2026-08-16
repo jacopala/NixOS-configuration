@@ -1,1 +1,1 @@
-(jsx_element) @fold
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/queries/jsx/folds.scm

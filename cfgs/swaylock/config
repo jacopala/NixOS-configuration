@@ -1,10 +1,1 @@
-image=$HOME/.config/sway/bgs/meowl_windows.png
-scaling=fill
-
-font=Intone Mono NF
-font-size=25px
-
-indicator-radius=100
-indicator-thickness=20
-indicator-x-position=500
-indicator-y-position=750
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/swaylock/config
