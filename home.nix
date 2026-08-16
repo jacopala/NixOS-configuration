@@ -19,10 +19,10 @@ in
     ## Applications
     alacritty       # Terminal 
     cheese          # Camera
-    fuzzel          # Launcher
     obsidian        # Notes
     quickshell      # Widgets
     swaybg          # Wallpaper
+    swaylock        # Sceen locker
     vlc             # Media player
     wofi            # Menu
     yazi            # File Manager

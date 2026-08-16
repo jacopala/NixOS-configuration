@@ -4,7 +4,8 @@ if [[ $# != 1 ]]; then
     echo "Usage: $0 COMMIT_MSG" 
 else
     printf "\n%s\n" "$1"
-    read -t 5 -n 1 -p "Confirm commit message?(Y/y)" confirm
+    read -t 15 -n 1 -p "Confirm commit message?(Y/y)" confirm
+    echo
 
     if [[ $confirm == "y" || $confirm == "Y" ]]; then
         cd ~/NixOS || exit 1
