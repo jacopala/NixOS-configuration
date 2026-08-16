@@ -30,6 +30,7 @@ in
     ## CLI
     btop          # Resource monitor
     eza           # Better ls
+    gh            # GitHub CLI
     nix-search    # Package repo search
     pfetch        # System info
     sutils        # Battery & Clock commands
@@ -52,8 +53,8 @@ in
 		enable = true;
     initExtra = ''
       export PS1="[ \\[\\e[38;5;4m\\]\w\\[\\e[0m\\] ]\\n\\[\\e[0m\\]\\$ "
-      alias yz=yazi
-      alias ls=eza --icons
+      alias yz="yazi"
+      alias ls="eza --icons"
     '';
 	};
   
