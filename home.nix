@@ -1,11 +1,11 @@
-#{ config, pkgs, ... }:
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 let
-  #dotfiles = "${config.home.homeDirectory}/NixOS/cfgs";
-  #create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  dotfiles = "/home/jacob/NixOS/cfgs";
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   # Link config files in ./cfgs
   configs = {
     alacritty = "alacritty";
+    fuzzel = "fuzzel";
     nvim = "nvim";
     quickshell = "quickshell";
     sway = "sway";
@@ -44,8 +44,6 @@ in
 
   programs.neovim = {
     enable = true;
-    withRuby = false;
-    withPython3 = false;
     extraPackages = with pkgs; [
       nil		        # LSP for nix lang
       nixpkgs-fmt	  # "
@@ -75,8 +73,7 @@ in
   # Function to assign config files
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      #source = create_symlink "${dotfiles}/${subpath}";
-      source = ./cfgs + "/${subpath}";
+      source = create_symlink "${dotfiles}/${subpath}";
       recursive = true;
     })
     configs;
