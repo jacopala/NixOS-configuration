@@ -31,6 +31,7 @@ input type:touchpad {
 bindsym $mod+q exec $term       # Open terminal
 bindsym $mod+r exec $menu       # Launcher
 bindsym $mod+c kill             # Close window
+bindsym $mod+escape exec $lock  # Lockscreen
 
 bindsym $mod+Shift+c reload
 
