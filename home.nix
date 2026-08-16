@@ -28,7 +28,7 @@ in
     yazi            # File Manager
 
     ## CLI
-    btop          # Resource monitor
+    htop          # Resource monitor
     eza           # Better ls
     gh            # GitHub CLI
     nix-search    # Package repo search
