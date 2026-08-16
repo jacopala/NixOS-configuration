@@ -12,5 +12,5 @@ no_actions=true
 hide_scroll=true
 hide_search=false
 
-halign=center
+#halign=center
 valign=center

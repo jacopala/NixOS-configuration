@@ -29,6 +29,7 @@ in
 
     ## CLI
     btop          # Resource monitor
+    eza           # Better ls
     nix-search    # Package repo search
     pfetch        # System info
     sutils        # Battery & Clock commands
@@ -51,7 +52,8 @@ in
 		enable = true;
     initExtra = ''
       export PS1="[ \\[\\e[38;5;4m\\]\w\\[\\e[0m\\] ]\\n\\[\\e[0m\\]\\$ "
-      export YAZI_CONFIG_HOME="${dotfiles}"
+      alias yz=yazi
+      alias ls=eza --icons
     '';
 	};
   
