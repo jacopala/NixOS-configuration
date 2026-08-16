@@ -6,7 +6,6 @@ let
   # Link config files in ./cfgs
   configs = {
     alacritty = "alacritty";
-    fuzzel = "fuzzel";
     nvim = "nvim";
     quickshell = "quickshell";
     sway = "sway";
@@ -45,6 +44,8 @@ in
 
   programs.neovim = {
     enable = true;
+    withRuby = false;
+    withPython3 = false;
     extraPackages = with pkgs; [
       nil		        # LSP for nix lang
       nixpkgs-fmt	  # "
