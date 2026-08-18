@@ -1,9 +1,9 @@
-[[mgr.prepend_keymap]];
+[[mgr.prepend_keymap]]
 on = [ "g", "c" ]
 run = "cd ~/NixOS/cfgs/"
 desc = "Go to dotfiles"
 
-[[mgr.prepend_keymap]];
+[[mgr.prepend_keymap]]
 on = [ "g", "o" ]
 run = "cd ~/Obsidian/"
 desk = "Go to Obsidian"
