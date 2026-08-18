@@ -54,7 +54,7 @@ in
       luarocks      # Lua package man
       php           # PHP lang (HTML embedded)
       phpPackages.composer
-      pipx          # Isolated Python envs
+      #pipx          # Isolated Python envs
       python3       # Python3
       ruby          # Ruby Lang
 
