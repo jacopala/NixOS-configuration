@@ -38,7 +38,7 @@ in
 	    weather       # Forecast
 
       ## NVIM setup
-      nvim
+      neovim
 
 	    fd            # Better find
 	    ripgrep       # Better grep
