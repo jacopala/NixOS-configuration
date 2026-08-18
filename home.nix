@@ -2,15 +2,18 @@
 let
   dotfiles = "/home/jacob/NixOS/cfgs";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-  # Link config files in ./cfgs
   configs = {
-    alacritty = "alacritty";
-    #nvim = "nvim";
-    quickshell = "quickshell";
-    sway = "sway";
-    swaylock = "swaylock";
-    wofi = "wofi";
-    #yazi = "yazi";
+  	# sp = subpath in ./cfgs
+	# r  = recursively define
+	#	use true if needs solid files
+	#	use false if self-managed
+    alacritty 	= { sp = "alacritty";	r = true;  };
+    nvim 	= { sp = "nvim";	r = false; };
+    quickshell 	= { sp = "quickshell";	r = true;  };
+    sway 	= { sp = "sway";	r = true;  };
+    swaylock 	= { sp = "swaylock";	r = true;  };
+    wofi 	= { sp = "wofi";	r = true;  };
+    #yazi 	= { sp = "yazi";	r = true;  };
   };
 in
 {
@@ -76,8 +79,6 @@ in
     withPython3 = true;
     withRuby = true;
   };
-  xdg.configFile."nvim".source =
-  	config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/NixOS/cfgs/nvim";
 
   # Additional init
 	home.username = "jacob";
@@ -89,6 +90,7 @@ in
     initExtra = ''
       export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
       alias yz="yazi"
+      alias y="yazi"
       alias ls="eza --icons"
       export PATH="$HOME/NixOS/scripts/:$PATH"     
     '';
@@ -97,8 +99,7 @@ in
   # Function to assign config files
   xdg.configFile = builtins.mapAttrs 
     (name: subpath: {
-      source = create_symlink "${dotfiles}/${subpath}";
-      recursive = true;
-    })
-    configs;
+      source = create_symlink "${dotfiles}/${cfg.sp}";
+      recursive = cfg.r;
+    }) configs;
 }
