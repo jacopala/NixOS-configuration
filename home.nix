@@ -70,7 +70,7 @@ in
   };
   programs.neovim = {
     enable = true;
-    shellWrapperName = "nvim"
+    shellWrapperName = "nvim";
     plugins = with pkgs.vimPlugins; [
       nvim-treesitter.withAllGrammars
       lazygit-nvim
