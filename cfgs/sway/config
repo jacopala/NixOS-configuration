@@ -28,6 +28,7 @@ seat * {
    hide_cursor 3000
    hide_cursor when-typing enable
 }
+mouse_warping container
 # Read `man 5 sway-input` for more information about this section.
 
 # Binds
