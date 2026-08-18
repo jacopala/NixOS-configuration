@@ -6,8 +6,8 @@ echo "Current changes:"
 git diff -w --stat
 printf "\nEnter commit message below (Ctrl+D to finish):\n"
 commitmsg=""
-while IFS= read -r line < /dev/tty; do
-    commitmsg+="$line"$'\n'
+while IFS= read -r line </dev/tty; do
+  commitmsg+="$line"$'\n'
 done
 
 clear
@@ -16,10 +16,10 @@ read -t 15 -n 1 -p "Does this look right?(Y/y) " confirm
 printf "\n\n"
 
 if [[ $confirm == "y" || $confirm == "Y" ]]; then
-    cd ~/NixOS || exit 1
-    printf "Authenticating...\n"
-    sudo git add .
-    git commit -m "$commitmsg"
-    sudo nixos-rebuild switch --flake ~/NixOS#nixos-btw
-    nix-env --delete-generations +5
+  cd /home/jacob/NixOS || exit 1
+  printf "Authenticating...\n"
+  git add .
+  git commit -m "$commitmsg"
+  nixos-rebuild switch --flake ~/NixOS#nixos-btw
+  nix-env --delete-generations +5
 fi
