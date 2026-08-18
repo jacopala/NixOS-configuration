@@ -13,7 +13,7 @@ let
     sway 	= { sp = "sway";	r = true;  };
     swaylock 	= { sp = "swaylock";	r = true;  };
     wofi 	= { sp = "wofi";	r = true;  };
-    #yazi 	= { sp = "yazi";	r = true;  };
+    yazi 	= { sp = "yazi";	r = false; };
   };
 in
 {
@@ -31,7 +31,6 @@ in
 
 	    ## CLI
 	    ast-grep      # Syntax grep
-      #home-manager  # Nix home.nix manager
 	    htop          # Resource monitor
 	    eza           # Better ls
       fzf           # Fuzzy find
@@ -41,6 +40,7 @@ in
 	    pfetch        # System info
 	    ripgrep       # Better grep
 	    sutils        # Battery & Clock commands
+	    tree-sitter   # Parser generator
 	    weather       # Forecast
 
       ## LAZYGIT
@@ -51,17 +51,13 @@ in
       go            # GoLang
       jdk           # Java
       julia         # Julia lang
+      lua5_1	    # Lua lang
       luarocks      # Lua package man
       php           # PHP lang (HTML embedded)
       phpPackages.composer
       #pipx          # Isolated Python envs
       python3       # Python3
       ruby          # Ruby Lang
-
-      ## NeoVIM
-      #neovim 
-	#nvim-treesitter
-	#lazygit-nvim
 	];
 
   programs.yazi = {
@@ -78,6 +74,7 @@ in
     defaultEditor = true;
     withPython3 = true;
     withRuby = true;
+    sideloadInitLua = true;
   };
 
   # Additional init
@@ -89,7 +86,6 @@ in
 		enable = true;
     initExtra = ''
       export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
-      alias yz="yazi"
       alias y="yazi"
       alias ls="eza --icons"
       export PATH="$HOME/NixOS/scripts/:$PATH"     
@@ -98,7 +94,7 @@ in
   
   # Function to assign config files
   xdg.configFile = builtins.mapAttrs 
-    (name: subpath: {
+    (name: cfg: {
       source = create_symlink "${dotfiles}/${cfg.sp}";
       recursive = cfg.r;
     }) configs;

@@ -16,9 +16,10 @@
     enable = true;
     xwayland.enable = true;
     extraPackages = with pkgs; [
-      brightnessctl   # Brightness
-      pulseaudio      # Audio
-      wl-clipboard    # Clipboard ext.
+      brightnessctl     # Brightness
+      pulseaudio        # Audio
+      sox		# Audio utility
+      wl-clipboard      # Clipboard ext.
     ];
   };
 
