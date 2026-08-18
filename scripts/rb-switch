@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Automates the usage of rebuild&switching using param for flake commits
-cd ~/NixOS/
+cd /home/jacob/NixOS/
 clear
 echo "Current changes:"
 git diff -w --stat

@@ -37,14 +37,20 @@ in
 	    sutils        # Battery & Clock commands
 	    weather       # Forecast
 
+      ## LANGS
+      python3
+
       ## NVIM setup
       neovim
-
-	    fd            # Better find
-	    ripgrep       # Better grep
+      
+      fd            # Better find
 	    nil		        # LSP for nix lang
 	    nixpkgs-fmt	  # "
 	    nodejs        # for treesitter parsers
+
+      # grug-far (find&replace)
+	    ripgrep
+	    ast-grep
 	];
 
   # Additional init
