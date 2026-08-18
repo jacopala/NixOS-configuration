@@ -1,1 +1,9 @@
-/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/yazi/keymap.toml
+[[mgr.prepend_keymap]];
+on = [ "g", "c" ]
+run = "cd ~/NixOS/cfgs/"
+desc = "Go to dotfiles"
+
+[[mgr.prepend_keymap]];
+on = [ "g", "o" ]
+run = "cd ~/Obsidian/"
+desk = "Go to Obsidian"
