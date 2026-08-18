@@ -5,8 +5,7 @@ let
   # Link config files in ./cfgs
   configs = {
     alacritty = "alacritty";
-    fuzzel = "fuzzel";
-    nvim = "nvim";
+    #nvim = "nvim";
     quickshell = "quickshell";
     sway = "sway";
     swaylock = "swaylock";
@@ -43,7 +42,6 @@ in
 
       ## LAZYGIT
       lazygit
-      vimPlugins.lazygit-nvim
 
       ## LANGS
       cargo         # Rust builder
@@ -58,17 +56,26 @@ in
       ruby          # Ruby Lang
 
       ## NeoVIM
-      neovim 
+      #neovim 
 	];
 
   programs.yazi = {
     enable = true;
-    shellWrapperName = "y";
+    shellWrapperName = "yz";
     plugins = with pkgs.yaziPlugins; {
       inherit 
         git
         lazygit;
     };
+  };
+  programs.neovim = {
+    enable = true;
+    shellWrapperName = "nvim"
+    plugins = with pkgs.vimPlugins; [
+      nvim-treesitter.withAllGrammars
+      lazygit-nvim
+    ];
+    extraPackages = [ pkgs.gcc ];
   };
 
   # Additional init
