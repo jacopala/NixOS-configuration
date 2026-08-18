@@ -63,10 +63,11 @@ in
 
   programs.yazi = {
     enable = true;
-    plugins = with pkgs.yaziPlugins; [
-      git
-      lazygit
-    ];
+    plugins = with pkgs.yaziPlugins; {
+      inherit 
+        git
+        lazygit;
+    };
   };
 
   # Additional init
