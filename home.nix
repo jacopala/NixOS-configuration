@@ -5,7 +5,7 @@ let
   # Link config files in ./cfgs
   configs = {
     alacritty = "alacritty";
-    nvim = "nvim";
+    #nvim = "nvim";
     quickshell = "quickshell";
     sway = "sway";
     swaylock = "swaylock";
@@ -57,8 +57,8 @@ in
 
       ## NeoVIM
       #neovim 
-	nvim-treesitter
-	lazygit-nvim
+	#nvim-treesitter
+	#lazygit-nvim
 	];
 
   programs.yazi = {
@@ -76,6 +76,8 @@ in
     withPython3 = true;
     withRuby = true;
   };
+  xdg.configFile."nvim".source =
+  	config.lib.file.mkOutOfStoreSymLink "${config.home.homeDirectory}/NixOS/cfgs/nvim";
 
   # Additional init
 	home.username = "jacob";
