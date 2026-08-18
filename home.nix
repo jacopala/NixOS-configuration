@@ -40,12 +40,9 @@ in
 	    ripgrep       # Better grep
 	    sutils        # Battery & Clock commands
 	    weather       # Forecast
-	    yazi          # File Manager
 
       ## LAZYGIT
       lazygit
-      yaziPlugins.git
-      yaziPlugins.lazygit
       vimPlugins.lazygit-nvim
 
       ## LANGS
@@ -63,6 +60,14 @@ in
       ## NeoVIM
       neovim 
 	];
+
+  programs.yazi = {
+    enable = true;
+    plugins = with pkgs.yaziPlugins; [
+      git
+      lazygit
+    ];
+  };
 
   # Additional init
 	home.username = "jacob";
