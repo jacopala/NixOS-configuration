@@ -11,7 +11,7 @@ let
     sway = "sway";
     swaylock = "swaylock";
     wofi = "wofi";
-    yazi = "yazi";
+    #yazi = "yazi";
   };
 in
 {
