@@ -8,6 +8,10 @@ sudo nixos-rebuild switch --flake ~/NixOS#nixos-btw --show-trace
 # test: apply without saving
 # boot: save without applying
 
+## Alternatively...
+home-manager switch
+# can be used to update only with home.nix
+
 ## List configuration generations
 nixos-rebuild list-generations
 
