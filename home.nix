@@ -17,46 +17,40 @@ in
 {
   # User specific packages
 	home.packages = with pkgs; [
-    ## Applications
-    alacritty       # Terminal 
-    cheese          # Camera
-    obsidian        # Notes
-    quickshell      # Widgets
-    swaybg          # Wallpaper
-    swaylock        # Sceen locker
-    vlc             # Media player
-    wofi            # Menu
-    yazi            # File Manager
+	    ## Applications
+	    alacritty       # Terminal 
+	    cheese          # Camera
+	    obsidian        # Notes
+	    quickshell      # Widgets
+	    swaybg          # Wallpaper
+	    swaylock        # Sceen locker
+	    vlc             # Media player
+	    wofi            # Menu
+	    yazi            # File Manager
 
-    ## CLI
-    htop          # Resource monitor
-    eza           # Better ls
-    fd            # Better find
-		ripgrep		    # Better grep
-    gh            # GitHub CLI
-    nix-search    # Package repo search
-    pfetch        # System info
-    sutils        # Battery & Clock commands
-    weather       # Forecast
+	    ## CLI
+	    htop          # Resource monitor
+	    eza           # Better ls
+	    gh            # GitHub CLI
+	    nix-search    # Package repo search
+	    pfetch        # System info
+	    sutils        # Battery & Clock commands
+	    weather       # Forecast
 
-		#neovim
+	    ## NVIM CLI
+	    fd            # Better find
+	    ripgrep       # Better grep
+	    nodejs	  # for treesitter parsers
+
+	    ## NVIM lang servers
+	    nil		  # LSP for nix lang
+	    nixpkgs-fmt	  # "
 	];
 
-  programs.neovim = {
-    enable = true;
-    sideloadInitLua = true;
-    withRuby = false;
-    withPython3 = false;
-    extraPackages = with pkgs; [
-      nil		        # LSP for nix lang
-      nixpkgs-fmt	  # "
-      nodejs		    # for treesitter parsers
-    ];
-    plugins = with pkgs.vimPlugins; [
-      plenary-nvim
-      obsidian-nvim
-    ];
-  };
+	programs.neovim = {
+		enable = true;
+		defaultEditor = true;
+	}
 
   # Additional init
 	home.username = "jacob";
