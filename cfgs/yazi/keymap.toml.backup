@@ -1,4 +1,0 @@
-[[mgr.prepend_keymap]]
-on = [ "g", "c" ]
-run = "cd ~/NixOS/cfgs/"
-desc = "Go to dotfiles"

@@ -37,22 +37,15 @@ in
 	    sutils        # Battery & Clock commands
 	    weather       # Forecast
 
-	    ## NVIM CLI
+      ## NVIM setup
+      nvim
+
 	    fd            # Better find
 	    ripgrep       # Better grep
-	    nodejs	  # for treesitter parsers
-
-	    ## NVIM lang servers
-	    nil		  # LSP for nix lang
+	    nil		        # LSP for nix lang
 	    nixpkgs-fmt	  # "
+	    nodejs        # for treesitter parsers
 	];
-
-	programs.neovim = {
-		enable = true;
-		defaultEditor = true;
-		withPython3 = true;
-		withRuby = true;
-	};
 
   # Additional init
 	home.username = "jacob";
