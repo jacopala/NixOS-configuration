@@ -43,6 +43,8 @@
   environment.systemPackages = with pkgs; [
     	gcc
 	    git
+      unzip
+      wget
     	vim
   ];
 

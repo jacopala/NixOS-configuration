@@ -26,31 +26,40 @@ in
 	    swaylock        # Sceen locker
 	    vlc             # Media player
 	    wofi            # Menu
-	    yazi            # File Manager
 
 	    ## CLI
+	    ast-grep      # Syntax grep
 	    htop          # Resource monitor
 	    eza           # Better ls
+      fzf           # Fuzzy find
 	    gh            # GitHub CLI
 	    nix-search    # Package repo search
 	    pfetch        # System info
+	    ripgrep       # Better grep
 	    sutils        # Battery & Clock commands
 	    weather       # Forecast
+	    yazi          # File Manager
+
+      ## LAZYGIT
+      lazygit
+      yaziPlugins.git
+      yaziPlugins.lazygit
+      vimPlugins.lazygit-nvim
 
       ## LANGS
-      python3
+      cargo         # Rust builder
+      go            # GoLang
+      jdk           # Java
+      julia         # Julia lang
+      luarocks      # Lua package man
+      php           # PHP lang (HTML embedded)
+      phpPackages.composer
+      pipx          # Isolated Python envs
+      python3       # Python3
+      ruby          # Ruby Lang
 
-      ## NVIM setup
-      neovim
-      
-      fd            # Better find
-	    nil		        # LSP for nix lang
-	    nixpkgs-fmt	  # "
-	    nodejs        # for treesitter parsers
-
-      # grug-far (find&replace)
-	    ripgrep
-	    ast-grep
+      ## NeoVIM
+      neovim 
 	];
 
   # Additional init
