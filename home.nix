@@ -33,6 +33,7 @@ in
 	    eza           # Better ls
       fzf           # Fuzzy find
 	    gh            # GitHub CLI
+      nix-diff      # Compare Nix derivations
 	    nix-search    # Package repo search
 	    pfetch        # System info
 	    ripgrep       # Better grep
