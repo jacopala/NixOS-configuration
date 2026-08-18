@@ -63,11 +63,11 @@ in
   programs.yazi = {
     enable = true;
     shellWrapperName = "yz";
-    plugins = with pkgs.yaziPlugins; {
-      inherit 
-        git
-        lazygit;
-    };
+    #plugins = with pkgs.yaziPlugins; {
+    #  inherit 
+    #    git
+    #    lazygit;
+    #};
   };
   programs.neovim = {
     enable = true;
