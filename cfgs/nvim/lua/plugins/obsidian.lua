@@ -1,5 +1,7 @@
 return {
    "obsidian-nvim/obsidian.nvim", version = "*",
+   lazy = true,
+   ft = "markdown",
    dependencies = {
       "nvim-lua/plenary.nvim",
    },
@@ -31,7 +33,7 @@ return {
          time_format = "%H:%M",
       },
       frontmatter = {
-         enabled = true,
+         enabled = false,
       },
    },
 }
