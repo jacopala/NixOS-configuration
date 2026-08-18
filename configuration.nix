@@ -41,10 +41,10 @@
 
   # System packages
   environment.systemPackages = with pkgs; [
-    	gcc
-	    git
-      unzip
-      wget
+  	gcc
+	git
+	unzip
+	wget
     	vim
   ];
 

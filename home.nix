@@ -5,7 +5,7 @@ let
   # Link config files in ./cfgs
   configs = {
     alacritty = "alacritty";
-    #nvim = "nvim";
+    nvim = "nvim";
     quickshell = "quickshell";
     sway = "sway";
     swaylock = "swaylock";
@@ -57,6 +57,8 @@ in
 
       ## NeoVIM
       #neovim 
+	nvim-treesitter
+	lazygit-nvim
 	];
 
   programs.yazi = {
@@ -70,11 +72,9 @@ in
   };
   programs.neovim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [
-      nvim-treesitter.withAllGrammars
-      lazygit-nvim
-    ];
-    extraPackages = [ pkgs.gcc ];
+    defaultEditor = true;
+    withPython3 = true;
+    withRuby = true;
   };
 
   # Additional init
