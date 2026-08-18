@@ -44,6 +44,9 @@ in
 
   programs.neovim = {
     enable = true;
+    sideloadInitLua = true;
+    withRuby = false;
+    withPython3 = false;
     extraPackages = with pkgs; [
       nil		        # LSP for nix lang
       nixpkgs-fmt	  # "

@@ -1,1 +1,0 @@
-/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/nvim/after/plugin/colors.lua
