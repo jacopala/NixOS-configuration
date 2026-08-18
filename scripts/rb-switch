@@ -20,6 +20,6 @@ if [[ $confirm == "y" || $confirm == "Y" ]]; then
   printf "Authenticating...\n"
   git add .
   git commit -m "$commitmsg"
-  nixos-rebuild switch --flake ~/NixOS#nixos-btw
+  nixos-rebuild switch --flake /home/jacob/NixOS#nixos-btw
   nix-env --delete-generations +5
 fi
