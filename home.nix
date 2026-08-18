@@ -29,7 +29,7 @@ in
 
 	    ## CLI
 	    ast-grep      # Syntax grep
-      home-manager  # Nix home.nix manager
+      #home-manager  # Nix home.nix manager
 	    htop          # Resource monitor
 	    eza           # Better ls
       fzf           # Fuzzy find
