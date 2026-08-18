@@ -50,7 +50,7 @@ in
 	programs.neovim = {
 		enable = true;
 		defaultEditor = true;
-	}
+	};
 
   # Additional init
 	home.username = "jacob";
