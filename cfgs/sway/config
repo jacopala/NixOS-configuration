@@ -5,6 +5,8 @@ set $left h
 set $down j
 set $up k
 set $right l
+bindsym $mod+d exec qs ipc call elements appear
+bindsym --release $mod+d exec qs ipc call elements disappear
 
 set $term alacritty     # Terminal
 set $menu wofi          # Launcher
