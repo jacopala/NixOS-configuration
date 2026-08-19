@@ -6,4 +6,4 @@ desc = "Go to dotfiles"
 [[mgr.prepend_keymap]]
 on = [ "g", "o" ]
 run = "cd ~/Obsidian/"
-desk = "Go to Obsidian"
+desc = "Go to Obsidian"

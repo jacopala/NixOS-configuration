@@ -50,6 +50,7 @@
   ];
 
   # Fonts
+  fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
     nerd-fonts.departure-mono # pixelated, techy font
     nerd-fonts.envy-code-r    # compact, rounded font

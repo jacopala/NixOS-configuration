@@ -29,6 +29,7 @@ seat * {
    hide_cursor when-typing enable
 }
 mouse_warping container
+seat * xcursor_theme Bibata_Ghost 36
 # Read `man 5 sway-input` for more information about this section.
 
 # Binds
