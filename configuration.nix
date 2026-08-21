@@ -52,7 +52,7 @@
 	git
 	unzip
 	wget
-    	vim
+   vim
   ];
 
   # Fonts

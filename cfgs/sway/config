@@ -129,6 +129,6 @@ bindsym $mod+Ctrl+Down  resize shrink height 20px
 
 gaps inner 0
 gaps outer 0
-smart_gaps on
+smart_gaps off
 default_border none
 default_floating_border none

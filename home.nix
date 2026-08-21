@@ -31,6 +31,7 @@ in
 
    ## CLI
             ast-grep      # Syntax grep
+            bluetui       # Bluetooth TUI
             htop          # Resource monitor
             eza           # Better ls
             fzf           # Fuzzy find
