@@ -38,6 +38,12 @@
   # Tailscale
   services.tailscale.enable = true;
 
+  # Bluetooth
+  hardware.bluetooth = {
+   enable = true;
+   powerOnBoot = false;
+  };
+
   ### SYSTEM PACKAGES
 
   # System packages
