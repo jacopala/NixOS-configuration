@@ -13,7 +13,8 @@ set $menu wofi          # Launcher
 set $lock swaylock      # Lockscreen
 
 # Wallpaper
-output * background ./bgs/meowl_windows.png fill
+#output * background ./bgs/meowl_windows.png fill
+output * background #1A1B26 solid_color
 
 # Monitors
 # swaymsg -t get_outputs

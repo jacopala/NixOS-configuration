@@ -3,10 +3,10 @@ let
    dotfiles = "/home/jacob/NixOS/cfgs";
    create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
    configs = {
-# sp = subpath in ./cfgs
-# r  = recursively define
-#	use true if needs solid files
-#	use false if self-managed
+   # sp = subpath in ./cfgs
+   # r  = recursively define
+   #	use true if needs solid files
+   #	use false if self-managed
       alacritty 	= { sp = "alacritty";	r = true;  };
       nvim 	= { sp = "nvim";	r = false; };
       quickshell 	= { sp = "quickshell";	r = true;  };
@@ -16,51 +16,51 @@ let
       yazi 	= { sp = "yazi";	r = false; };
    };
 in
-   {
+{
    # User specific packages
       home.packages = with pkgs; [
-   ## Applications
+         ## Applications
          alacritty       # Terminal 
-            cheese          # Camera
-            obsidian        # Notes
-            quickshell      # Widgets
-            swaybg          # Wallpaper
-            swaylock        # Sceen locker
-            vlc             # Media player
-            wofi            # Menu
+         cheese          # Camera
+         obsidian        # Notes
+         quickshell      # Widgets
+         swaybg          # Wallpaper
+         swaylock        # Sceen locker
+         vlc             # Media player
+         wofi            # Menu
 
-   ## CLI
-            ast-grep      # Syntax grep
-            bluetui       # Bluetooth TUI
-            htop          # Resource monitor
-            eza           # Better ls
-            fzf           # Fuzzy find
-            gh            # GitHub CLI
-            nix-diff      # Compare Nix derivations
-            nix-search    # Package repo search
-            pfetch        # System info
-            ripgrep       # Better grep
-            sutils        # Battery & Clock commands
-            tree-sitter   # Parser generator
-            ueberzugpp    # Images in terminal
-            weather       # Forecast
+         ## CLI
+         ast-grep      # Syntax grep
+         bluetui       # Bluetooth TUI
+         htop          # Resource monitor
+         eza           # Better ls
+         fzf           # Fuzzy find
+         gh            # GitHub CLI
+         leetgo        # LeetCode CLI
+         nix-search    # Package repo search
+         pfetch        # System info
+         ripgrep       # Better grep
+         sutils        # Battery & Clock commands
+         tree-sitter   # Parser generator
+         ueberzugpp    # Images in terminal
+         weather       # Forecast
 
-   ## LAZYGIT
-            lazygit
+         ## LAZYGIT
+         lazygit
 
-   ## LANGS
-            cargo         # Rust builder
-            go            # GoLang
-            jdk           # Java
-            julia         # Julia lang
-            lua5_1	    # Lua lang
-            luarocks      # Lua package man
-            php           # PHP lang (HTML embedded)
-            phpPackages.composer
-   #pipx          # Isolated Python envs
-            python3       # Python3
-            ruby          # Ruby Lang
-            ];
+         ## LANGS
+         cargo         # Rust builder
+         go            # GoLang
+         jdk           # Java
+         julia         # Julia lang
+         lua5_1	    # Lua lang
+         luarocks      # Lua package man
+         php           # PHP lang (HTML embedded)
+         phpPackages.composer
+         #pipx          # Isolated Python envs
+         python3       # Python3
+         ruby          # Ruby Lang
+      ];
 
       programs.yazi = {
          enable = true;
@@ -84,6 +84,8 @@ in
          initExtra = ''
             export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
             alias y="yazi"
+            alias c="clear"
+            alias n="nvim"
             alias ls="eza --icons"
             export PATH="$HOME/NixOS/scripts/:$PATH"     
             '';
@@ -95,4 +97,4 @@ in
           source = create_symlink "${dotfiles}/${cfg.sp}";
           recursive = cfg.r;
           }) configs;
-   }
+}
