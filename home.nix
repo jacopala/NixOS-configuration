@@ -81,10 +81,10 @@ in
       home.stateVersion = "25.05";
       programs.bash = {
          enable = true;
-         bashrcExtra = "
-            export PS1='\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]'
-            export PATH='$HOME/NixOS/scripts/:$PATH'  
-         ";
+         bashrcExtra = ''
+            export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
+            export PATH="$HOME/NixOS/scripts/:$PATH"  
+         '';
          shellAliases = {
             c = "clear";
             ls = "eza --icons";
