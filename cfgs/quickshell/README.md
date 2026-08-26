@@ -1,0 +1,1 @@
+/nix/store/g6mfv79p1h0mflf5sgbqnpkssrirxgi5-home-manager-files/.config/quickshell/volume-osd/README.md

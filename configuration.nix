@@ -5,87 +5,96 @@
 { config, lib, pkgs, ... }:
 
 {
-  ### WINDOW MANAGER / DISPLAY ENVIRONMENT
+### WINDOW MANAGER / DISPLAY ENVIRONMENT
 
-  # Ly Login
-  services.displayManager.ly.enable = true;
-  
-  # Sway
-  services.gnome.gnome-software.enable = true;
-  programs.sway = {
-    enable = true;
-    xwayland.enable = true;
-    extraPackages = with pkgs; [
-      brightnessctl     # Brightness
-      pulseaudio        # Audio
-      sox		# Audio utility
-      wl-clipboard      # Clipboard ext.
-    ];
-  };
+# Ly Login
+   services.displayManager.ly.enable = true;
 
-  # Pipewire audio
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
+# Sway
+   services.gnome.gnome-software.enable = true;
+   programs.sway = {
+      enable = true;
+      xwayland.enable = true;
+      extraPackages = with pkgs; [
+         brightnessctl     # Brightness
+            pulseaudio        # Audio
+            sox		# Audio utility
+            wl-clipboard      # Clipboard ext.
+      ];
+   };
 
-  # Touchpad
-  services.libinput.enable = true;
+# Cron script
+   services.cron = {
+      enable = true;
+      # Weekly delete older generations and clean up the identical files
+      systemCronJobs = [
+         "0 0 */7 * *   root  sudo nix-env --delete-generations +3 ; nix-store --optimise"
+      ];
+   };
 
-  # Browser
-  programs.firefox.enable = true;
+# Pipewire audio
+   services.pipewire = {
+      enable = true;
+      pulse.enable = true;
+   };
 
-  # Tailscale
-  services.tailscale.enable = true;
+# Touchpad
+   services.libinput.enable = true;
 
-  # Bluetooth
-  hardware.bluetooth = {
-   enable = true;
-   powerOnBoot = false;
-  };
+# Browser
+   programs.firefox.enable = true;
 
-  ### SYSTEM PACKAGES
+# Tailscale
+   services.tailscale.enable = true;
 
-  # System packages
-  environment.systemPackages = with pkgs; [
-  	gcc
-	git
-	unzip
-	wget
-   vim
-  ];
+# Bluetooth
+   hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+   };
 
-  # Fonts
-  fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
-    nerd-fonts.departure-mono # pixelated, techy font
-    nerd-fonts.envy-code-r    # compact, rounded font
-    nerd-fonts.hurmit         # bulkier, modernistic font
-    nerd-fonts.intone-mono    # legible, standard font
-    nerd-fonts.symbols-only   # fallback symbol font for others
-  ];
+### SYSTEM PACKAGES
 
-  # Allowed unfree/licensed packages
-  nixpkgs.config.allowUnfreePackages = [
-    "obsidian"
-  ];
+# System packages
+   environment.systemPackages = with pkgs; [
+      gcc
+         git
+         unzip
+         wget
+         vim
+   ];
 
-  ### SYSTEM SETTINGS
-  imports =
-    [
+# Fonts
+   fonts.fontDir.enable = true;
+   fonts.packages = with pkgs; [
+      nerd-fonts.departure-mono # pixelated, techy font
+         nerd-fonts.envy-code-r    # compact, rounded font
+         nerd-fonts.hurmit         # bulkier, modernistic font
+         nerd-fonts.intone-mono    # legible, standard font
+         nerd-fonts.symbols-only   # fallback symbol font for others
+   ];
+
+# Allowed unfree/licensed packages
+   nixpkgs.config.allowUnfreePackages = [
+      "obsidian"
+   ];
+
+### SYSTEM SETTINGS
+   imports =
+      [
       ./hardware-configuration.nix
-    ];
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "nixos-btw";
-  networking.networkmanager.enable = true;
-  time.timeZone = "America/Chicago";
+      ];
+   boot.loader.systemd-boot.enable = true;
+   boot.loader.efi.canTouchEfiVariables = true;
+   networking.hostName = "nixos-btw";
+   networking.networkmanager.enable = true;
+   time.timeZone = "America/Chicago";
 
-  users.users.jacob = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-  };
+   users.users.jacob = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" ];
+   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "26.05";
+   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+   system.stateVersion = "26.05";
 }

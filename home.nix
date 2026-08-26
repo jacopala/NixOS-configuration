@@ -81,14 +81,16 @@ in
       home.stateVersion = "25.05";
       programs.bash = {
          enable = true;
-         initExtra = ''
+         bashrcExtra = "
             export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
-            alias y="yazi"
-            alias c="clear"
-            alias n="nvim"
-            alias ls="eza --icons"
-            export PATH="$HOME/NixOS/scripts/:$PATH"     
-            '';
+            export PATH="$HOME/NixOS/scripts/:$PATH"  
+         ";
+         shellAliases = {
+            c = "clear";
+            ls = "eza --icons";
+            n = "nvim";
+            y = "yazi";
+         };
       };
 
    # Function to assign config files
