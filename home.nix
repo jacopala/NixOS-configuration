@@ -95,6 +95,7 @@ in
             ls = "eza --icons";
             n = "nvim";
             y = "yazi";
+            cd = "zoxide";
          };
       };
 
