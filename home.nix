@@ -94,8 +94,8 @@ in
             c = "clear";
             ls = "eza --icons";
             n = "nvim";
+            p = "ping google.com -c 1";
             y = "yazi";
-            cd = "zoxide";
          };
       };
 
