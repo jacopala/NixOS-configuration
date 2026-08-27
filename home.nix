@@ -33,6 +33,7 @@ in
          ast-grep      # Syntax grep
          bluetui       # Bluetooth TUI
          htop          # Resource monitor
+         epy           # EPUB reader
          eza           # Better ls
          fzf           # Fuzzy find
          gh            # GitHub CLI

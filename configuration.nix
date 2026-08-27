@@ -26,7 +26,7 @@
 # Cron script
    services.cron = {
       enable = true;
-      # Weekly delete older generations and clean up the identical files
+# Weekly delete older generations and clean up the identical files
       systemCronJobs = [
          "0 0 */7 * *   root  sudo nix-env --delete-generations +3 ; nix-store --optimise"
       ];
@@ -59,6 +59,7 @@
    environment.systemPackages = with pkgs; [
       gcc
          git
+         pkg-config
          unzip
          wget
          vim
