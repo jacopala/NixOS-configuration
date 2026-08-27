@@ -45,6 +45,7 @@ in
          tree-sitter   # Parser generator
          ueberzugpp    # Images in terminal
          weather       # Forecast
+         zoxide        # Better cd
 
          ## LAZYGIT
          lazygit
@@ -61,6 +62,9 @@ in
          #pipx          # Isolated Python envs
          python3       # Python3
          ruby          # Ruby Lang
+
+         ## LIBS
+         openssl       # Cryptography for SSL & TLS protocols
       ];
 
       programs.yazi = {
