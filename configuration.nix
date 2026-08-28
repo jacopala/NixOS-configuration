@@ -23,12 +23,21 @@
       ];
    };
 
-# Cron script
+# Cron Jobs
    services.cron = {
       enable = true;
-# Weekly delete older generations and clean up the identical files
       systemCronJobs = [
-         "0 0 */7 * *   root  sudo nix-env --delete-generations +3 ; nix-store --optimise"
+         # Cleanup
+         "0 0 */3 * *   root  \
+         nix-env --delete-generations +3 ; \
+         nix-store --optimise > /home/jacob/.cronlog"
+         # Github backup
+         ''
+         0 0 */3 * *  jacob  \
+         cd /home/jacob/NixOS/ && \
+         GIT_SSH_COMMAND="/run/current-system/sw/bin/ssh -i /home/jacob/.ssh/id_ed25519.pub" \
+         /run/current-system/sw/bin/git push origin main>> /home/jacob/.cronlog
+         ''
       ];
    };
 
