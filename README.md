@@ -1,12 +1,12 @@
-# My personal NixOS setup for my to-go laptop
+# NixOS setup for my laptop
 
-WM: Sway
-editor: lazy nvim
+WM: Sway  
+editor: lazy nvim  
 files: yazi + ueberzugpp
-browser: firefox
-notes: obsidian
+browser: firefox  
+notes: obsidian  
 
-launcher: wofi
-widgets (havent started): quickshell
+launcher: wofi  
+widgets (havent started): quickshell  
 
-larpcmd: pfetch
+larpcmd: pfetch  
