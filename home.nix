@@ -27,6 +27,7 @@ in
          quickshell      # Widgets
          swaybg          # Wallpaper
          swaylock        # Sceen locker
+         vesktop         # Discord alt client
          vlc             # Media player
          wofi            # Menu
 
