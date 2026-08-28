@@ -23,11 +23,12 @@ in
          alacritty       # Terminal 
          calibre         # E-book manager
          cheese          # Camera
+         dragon-drop     # Drag files
          obsidian        # Notes
          quickshell      # Widgets
          swaybg          # Wallpaper
          swaylock        # Sceen locker
-         thunar          # GUI file manager
+         thunar          # GUI file manager (backup)
          vesktop         # Discord alt client
          vlc             # Media player
          wofi            # Menu

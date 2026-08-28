@@ -1,0 +1,48 @@
+[icon]
+dirs = [
+   # Config
+	{ name = ".config", text = "󰒓", fg = "red" },
+	{ name = "cfgs", text = "󰒓", fg = "red" },
+
+   # Git
+	{ name = ".git", text = "󰊢", fg = "green" },
+	{ name = ".github", text = "󰊤", fg = "green" },
+	{ name = ".npm", text = "󰛷", fg = "green" },
+
+   # Key directories
+   { name = "NixOS", text = "", fg = "lightblue"},
+
+	{ name = "Downloads", text = "󰇚", fg = "blue" },
+	{ name = "Library", text = "󰮩", fg = "blue" },
+
+	{ name = "Music", text = "󰲸", fg = "blue" },
+	{ name = "Documents", text = "󰈙", fg = "blue" },
+	{ name = "Pictures", text = "", fg = "blue" },
+	{ name = "Videos", text = "", fg = "blue" },
+
+   { name = "LeetCode", text = "󰓎", fg = "yellow" },
+   { name = "Obsidian", text = "󰌱", fg = "magenta" }
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "", fg = "magenta" },
+	{ if = "link", text = "", fg = "magenta" },
+	{ if = "block", text = "", fg = "magenta" },
+	{ if = "char", text = "", fg = "magenta" },
+	{ if = "fifo", text = "", fg = "magenta" },
+	{ if = "sock", text = "", fg = "magenta" },
+	{ if = "sticky", text = "", fg = "magenta" },
+	{ if = "dummy", text = "", fg = "magenta" },
+
+	# Fallback
+	{ if = "dir & hovered", text = "󰝰", fg = "blue" },
+	{ if = "dir", text = "󰉋", fg = "blue" },
+	{ if = "exec", text = "", fg = "green" },
+	{ if = "!dir", text = "", fg = "white" },
+]
+prepend_exts = [
+   { name = "mp3", text = "󰎇", fg = "magenta" },
+   { name = "nix", text = "󱄅", fg = "lightblue" },
+   { name = "lock", text = "󰌾", fg = "white" },
+   { name = "md", text = "󰍔", fg = "yellow" }
+]

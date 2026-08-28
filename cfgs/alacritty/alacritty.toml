@@ -18,26 +18,26 @@ normal = { family = "Intone Mono NF", style = "Regular" }
 size = 20
 
 [colors.bright]
-black   = "#444b6a"
-blue    = "#7da6ff"
-cyan    = "#0db9d7"
-green   = "#b9f27c"
-magenta = "#bb9af7"
-red     = "#ff7a93"
-white   = "#acb0d0"
-yellow  = "#ff9e64"
+black   = "#475258"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#d3c6aa"
 
 
 [colors.primary]
-background = "#1a1b26"
-foreground = "#c0caf5"
+background = "#272e33"
+foreground = "#d3c6aa"
 
 [colors.normal]
-black   = "#15161e"
-red     = "#f7768e"
-green   = "#9ece6a"
-yellow  = "#e0af68"
-blue    = "#7aa2f7"
-magenta = "#bb9af7"
-cyan    = "#7dcfff"
-white   = "#a9b1d6"
+black   = "#414b50"
+red     = "#e67e80"
+green   = "#a7c080"
+yellow  = "#dbbc7f"
+blue    = "#7fbbb3"
+magenta = "#d699b6"
+cyan    = "#83c092"
+white   = "#d3c6aa"
