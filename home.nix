@@ -21,6 +21,7 @@ in
       home.packages = with pkgs; [
          ## Applications
          alacritty       # Terminal 
+         calibre         # E-book manager
          cheese          # Camera
          obsidian        # Notes
          quickshell      # Widgets
@@ -33,7 +34,6 @@ in
          ast-grep      # Syntax grep
          bluetui       # Bluetooth TUI
          htop          # Resource monitor
-         epy           # EPUB reader
          eza           # Better ls
          fzf           # Fuzzy find
          gh            # GitHub CLI
@@ -88,9 +88,10 @@ in
          enable = true;
          bashrcExtra = ''
             export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
-            export PATH="$HOME/NixOS/scripts/:$PATH"  
+            export PATH="$HOME/NixOS/scripts/:$HOME/.cargo/bin:$PATH"  
          '';
          shellAliases = {
+            b = "battery";
             c = "clear";
             ls = "eza --icons";
             n = "nvim";
