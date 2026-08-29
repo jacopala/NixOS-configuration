@@ -52,6 +52,7 @@ in
 
 ## LAZYGIT
          lazygit
+         everforest-cursors
 
 ## LANGS
          cargo          # Rust builder
@@ -101,6 +102,7 @@ in
          n = "nvim";
          p = "ping google.com -c 1";
          y = "yazi";
+         nmtui='NEWT_COLORS="root=white,black" nmtui';
       };
    };
 
