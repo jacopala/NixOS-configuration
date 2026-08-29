@@ -64,8 +64,8 @@ in
          phpPackages.composer
 #pipx          # Isolated Python envs
          python3        # Python3
-         ruby           # Ruby Lang
-         rustup         # Rust
+         ruby           # Ruby lang
+         rustc          # Rust lang
 
 ## LIBS
          openssl       # Cryptography for SSL & TLS protocols
