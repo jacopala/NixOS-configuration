@@ -21,56 +21,53 @@ in
    home.packages = with pkgs; [
 ## Applications
       alacritty       # Terminal 
-         calibre         # E-book manager
-         cheese          # Camera
-         dragon-drop     # Drag files
-         obsidian        # Notes
-         quickshell      # Widgets
-         swaybg          # Wallpaper
-         swaylock        # Sceen locker
-         thunar          # GUI file manager (backup)
-         vesktop         # Discord alt client
-         vlc             # Media player
-         wofi            # Menu
+      calibre         # EPUB reader
+      cheese          # Camera
+      dragon-drop     # Drag files
+      obsidian        # Notes
+      quickshell      # Widgets
+      swaybg          # Wallpaper
+      swaylock        # Sceen locker
+      thunar          # GUI file manager (backup)
+      vesktop         # Discord alt client
+      vlc             # Media player
+      wofi            # Menu
+      zathura         # PDF reader
 
 ## CLI
-         ast-grep      # Syntax grep
-         bluetui       # Bluetooth TUI
-         htop          # Resource monitor
-         eza           # Better ls
-         fzf           # Fuzzy find
-         gh            # GitHub CLI
-         leetgo        # LeetCode CLI
-         nix-search    # Package repo search
-         pfetch        # System info
-         ripgrep       # Better grep
-         sutils        # Battery & Clock commands
-         tree-sitter   # Parser generator
-         ueberzugpp    # Images in terminal
-         weather       # Forecast
-         zoxide        # Better cd
+      ast-grep      # Syntax grep
+      bluetui       # Bluetooth TUI
+      htop          # Resource monitor
+      eza           # Better ls
+      fzf           # Fuzzy find
+      gh            # GitHub CLI
+      leetgo        # LeetCode CLI
+      nix-search    # Package repo search
+      pfetch        # System info
+      ripgrep       # Better grep
+      sutils        # Battery & Clock commands
+      tree-sitter   # Parser generator
+      ueberzugpp    # Images in terminal
+      weather       # Forecast
+      zoxide        # Better cd
 
 ## LAZYGIT
-         lazygit
-         everforest-cursors
+      lazygit
 
 ## LANGS
-         cargo          # Rust builder
-         go             # GoLang
-         jdk            # Java
-         julia          # Julia lang
-         lua5_1         # Lua lang
-         luarocks       # Lua package man
-         php            # PHP lang (HTML embedded)
-         phpPackages.composer
+      cargo          # Rust builder
+      go             # GoLang
+      jdk            # Java
+      julia          # Julia lang
+      lua5_1         # Lua lang
+      luarocks       # Lua package man
+      php            # PHP lang (HTML embedded)
+      phpPackages.composer
 #pipx          # Isolated Python envs
-         python3        # Python3
-         ruby           # Ruby lang
-         rustc          # Rust lang
-
-## LIBS
-         openssl       # Cryptography for SSL & TLS protocols
-         ];
+      python3        # Python3
+      ruby           # Ruby lang
+      rustc          # Rust lang
+   ];
 
    programs.yazi = {
       enable = true;
@@ -102,7 +99,7 @@ in
          n = "nvim";
          p = "ping google.com -c 1";
          y = "yazi";
-         nmtui='NEWT_COLORS="root=white,black" nmtui';
+         nmtui="NEWT_COLORS=\"root=white,black\" nmtui";
       };
    };
 
