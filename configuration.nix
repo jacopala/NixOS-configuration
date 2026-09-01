@@ -66,12 +66,13 @@
 
 # System packages
    environment.systemPackages = with pkgs; [
-      gcc
-         git
-         pkg-config
-         unzip
-         wget
-         vim
+      auto-cpufreq      ## CPU/power optimizer
+      gcc               ## C-lang compiler
+         git            ## Github + version control
+         pkg-config     ## Packages can find information about other packages
+         unzip          ## Decompressor
+         wget           ## Network downloader
+         vim            ## Text editor
    ];
 
 # Fonts
