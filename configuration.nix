@@ -71,6 +71,7 @@
          git            ## Github + version control
          pkg-config     ## Packages can find information about other packages
          unzip          ## Decompressor
+         tlp            ## Advanced Power Management
          wget           ## Network downloader
          vim            ## Text editor
    ];
