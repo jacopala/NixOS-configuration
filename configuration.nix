@@ -98,8 +98,13 @@
       ];
    boot.loader.systemd-boot.enable = true;
    boot.loader.efi.canTouchEfiVariables = true;
-   networking.hostName = "nixos-btw";
-   networking.networkmanager.enable = true;
+   networking = {
+      hostName = "nixos-btw";
+      networkmanager = {
+         enable = true;
+         wifi.scanRandMacAddress = false;
+      };
+   };
    time.timeZone = "America/Chicago";
 
    users.users.jacob = {

@@ -99,7 +99,7 @@ in
          n = "nvim";
          p = "ping google.com -c 1";
          y = "yazi";
-         nmtui="NEWT_COLORS=\"root=white,black\" nmtui";
+         nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
       };
    };
 
