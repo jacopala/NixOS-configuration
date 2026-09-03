@@ -98,6 +98,7 @@ in
          ls = "eza --icons";
          n = "nvim";
          p = "ping google.com -c 1";
+         ts = "tailscale";
          y = "yazi";
          nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
       };
