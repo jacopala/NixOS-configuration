@@ -7,14 +7,14 @@ configs = {
 # r  = recursively define
 #	use true if needs solid files
 #	use false if self-managed
-   alacritty 	= { sp = "alacritty";	r = true;  };
-   niri = { sp = "niri"; r = true; };
-   nvim 	= { sp = "nvim";	r = false; };
+   alacritty   = { sp = "alacritty";	r = true;  };
+   fuzzel      = { sp = "fuzzel"; r = true; };
+   niri        = { sp = "niri"; r = true; };
+   nvim 	      = { sp = "nvim";	r = false; };
    quickshell 	= { sp = "quickshell";	r = true;  };
-   sway 	= { sp = "sway";	r = true;  };
+   sway 	      = { sp = "sway";	r = true;  };
    swaylock 	= { sp = "swaylock";	r = true;  };
-   wofi 	= { sp = "wofi";	r = true;  };
-   yazi 	= { sp = "yazi";	r = false; };
+   yazi 	      = { sp = "yazi";	r = false; };
 };
 in
 {
@@ -22,29 +22,32 @@ in
    home.packages = with pkgs; [
 ## Applications
       alacritty       # Terminal 
-      calibre         # EPUB reader
-      cheese          # Camera
-      dragon-drop     # Drag files
+      fuzzel          # Launcher
       obsidian        # Notes
       quickshell      # Widgets
       swaybg          # Wallpaper
       swaylock        # Sceen locker
-      thunar          # GUI file manager (backup)
       vesktop         # Discord alt client
-      vlc             # Media player
-      wofi            # Menu
+
+## Media
+      calibre         # EPUB reader
+      cheese          # Camera
+      thunar          # GUI file manager (backup)
       zathura         # PDF reader
+      vlc             # Video/Audio player
 
 ## CLI
       ast-grep      # Syntax grep
       bluetui       # Bluetooth TUI
-      htop          # Resource monitor
+      dragon-drop   # Drag files
+      htop          # Memory/process monitor
       eza           # Better ls
       fzf           # Fuzzy find
       gh            # GitHub CLI
       leetgo        # LeetCode CLI
       nix-search    # Package repo search
       pfetch        # System info
+      powertop      # Battery monitor
       ripgrep       # Better grep
       sutils        # Battery & Clock commands
       tree-sitter   # Parser generator

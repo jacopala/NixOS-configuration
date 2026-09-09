@@ -67,7 +67,6 @@
          wl-clipboard      # Clipboard ext.
 
          auto-cpufreq      ## CPU/power optimizer
-         tlp            ## Advanced Power Management
 
          gcc               ## C-lang compiler
          git            ## Github + version control
