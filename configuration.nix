@@ -7,21 +7,16 @@
 {
 ### WINDOW MANAGER / DISPLAY ENVIRONMENT
 
-# Ly Login
+# Ly greeter
    services.displayManager.ly.enable = true;
 
-# Sway
-   services.gnome.gnome-software.enable = true;
-   programs.sway = {
-      enable = true;
-      xwayland.enable = true;
-      extraPackages = with pkgs; [
-         brightnessctl     # Brightness
-            pulseaudio        # Audio
-            sox		# Audio utility
-            wl-clipboard      # Clipboard ext.
-      ];
-   };
+# X11 -> Wayland Compat
+   programs.xwayland.enable = true;
+   #services.gnome.gnome-software.enable = true;
+
+# Compositors/Window Managers
+   programs.sway.enable = true;
+   programs.niri.enable = true;
 
 # Cron Jobs
    services.cron = {
@@ -66,12 +61,18 @@
 
 # System packages
    environment.systemPackages = with pkgs; [
-      auto-cpufreq      ## CPU/power optimizer
-      gcc               ## C-lang compiler
+         brightnessctl     # Brightness
+         pulseaudio        # Audio
+         sox		# Audio utility
+         wl-clipboard      # Clipboard ext.
+
+         auto-cpufreq      ## CPU/power optimizer
+         tlp            ## Advanced Power Management
+
+         gcc               ## C-lang compiler
          git            ## Github + version control
          pkg-config     ## Packages can find information about other packages
          unzip          ## Decompressor
-         tlp            ## Advanced Power Management
          wget           ## Network downloader
          vim            ## Text editor
    ];
