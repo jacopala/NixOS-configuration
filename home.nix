@@ -8,6 +8,7 @@ configs = {
 #	use true if needs solid files
 #	use false if self-managed
    alacritty 	= { sp = "alacritty";	r = true;  };
+   niri = { sp = "niri"; r = true; };
    nvim 	= { sp = "nvim";	r = false; };
    quickshell 	= { sp = "quickshell";	r = true;  };
    sway 	= { sp = "sway";	r = true;  };
