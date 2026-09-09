@@ -18,11 +18,6 @@
    programs.sway.enable = true;
    programs.niri.enable = true;
 
-   services.awww = {
-      enable = true;
-      extraArgs = ["--no-cache"];
-   };
-
 # Cron Jobs
    services.cron = {
       enable = true;

@@ -84,6 +84,11 @@ in
       withRuby = true;
       sideloadInitLua = true;
    };
+   services.awww = {
+      enable = true;
+      extraArgs = ["--no-cache"];
+   };
+
 
 # Additional init
    home.username = "jacob";
