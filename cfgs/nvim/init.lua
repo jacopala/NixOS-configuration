@@ -9,7 +9,8 @@ vim.opt.expandtab = true
 
 -- theme
 vim.cmd.colorscheme("everforest")
---- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- no background color
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 
 -- for obsidian
 vim.opt.conceallevel = 1
