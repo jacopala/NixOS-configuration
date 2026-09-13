@@ -42,6 +42,12 @@
       pulse.enable = true;
    };
 
+# VirtualBox
+   virtualisation.virtualbox.host = {
+      enable = true;
+      headless = true;
+   };
+
 # Touchpad
    services.libinput.enable = true;
 
@@ -89,6 +95,7 @@
 # Allowed unfree/licensed packages
    nixpkgs.config.allowUnfreePackages = [
       "obsidian"
+      "morgen"
    ];
 
 ### SYSTEM SETTINGS

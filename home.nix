@@ -23,6 +23,7 @@ in
 ## Applications
       alacritty       # Terminal 
       fuzzel          # Launcher
+      morgen          # Calendar
       obsidian        # Notes
       quickshell      # Widgets
       swaybg          # Wallpaper
