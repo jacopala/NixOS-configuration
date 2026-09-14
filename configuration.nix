@@ -45,7 +45,7 @@
 # VirtualBox
    virtualisation.virtualbox.host = {
       enable = true;
-      headless = true;
+      headless = false;
    };
 
 # Touchpad
@@ -109,14 +109,14 @@
       hostName = "nixos-btw";
       networkmanager = {
          enable = true;
-         wifi.scanRandMacAddress = false;
+         wifi.powersave = false;
       };
    };
    time.timeZone = "America/Chicago";
 
    users.users.jacob = {
       isNormalUser = true;
-      extraGroups = [ "wheel" ];
+      extraGroups = [ "wheel" "vboxusers" ];
    };
 
    nix.settings.experimental-features = [ "nix-command" "flakes" ];
