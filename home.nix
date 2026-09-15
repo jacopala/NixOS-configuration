@@ -105,7 +105,7 @@ in
       shellAliases = {
          b = "battery";
          c = "clear";
-         Kali = "VBoxManage startvm Kali --type sdl";
+         kali = "VBoxManage startvm Kali --type sdl";
          ls = "eza --icons";
          n = "nvim";
          p = "ping google.com -c 1";

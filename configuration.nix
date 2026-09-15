@@ -109,7 +109,10 @@
       hostName = "nixos-btw";
       networkmanager = {
          enable = true;
-         wifi.powersave = false;
+         wifi = {
+            powersave = false;
+            scanRandMacAddress = false;
+         };
       };
    };
    time.timeZone = "America/Chicago";
