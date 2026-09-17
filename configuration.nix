@@ -74,6 +74,7 @@
 
          auto-cpufreq      ## CPU/power optimizer
 
+         file              ## File details (idk why this isnt default)
          gcc               ## C-lang compiler
          git            ## Github + version control
          pkg-config     ## Packages can find information about other packages
@@ -110,6 +111,7 @@
       networkmanager = {
          enable = true;
          wifi = {
+            backend = "iwd";
             powersave = false;
             scanRandMacAddress = false;
          };
