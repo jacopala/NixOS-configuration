@@ -54,6 +54,17 @@
 # Browser
    programs.firefox.enable = true;
 
+# VSC
+   programs.vscode = {
+      enable = true;
+      extensions = with pkgs.vscode-extensions; [
+         prettier.prettier-vscode
+         ritwickdey.liveserver
+         vscodevim.vim
+         tomoki1207.pdf
+      ];
+   };
+
 # Tailscale
    services.tailscale.enable = true;
 
@@ -97,6 +108,7 @@
    nixpkgs.config.allowUnfreePackages = [
       "obsidian"
       "morgen"
+      "vscode"
    ];
 
 ### SYSTEM SETTINGS
@@ -111,7 +123,7 @@
       networkmanager = {
          enable = true;
          wifi = {
-            backend = "iwd";
+            #backend = "iwd";
             powersave = false;
             scanRandMacAddress = false;
          };

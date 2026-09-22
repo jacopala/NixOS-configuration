@@ -96,6 +96,7 @@ in
    home.homeDirectory = "/home/jacob";
    programs.git.enable = true;
    home.stateVersion = "25.05";
+
    programs.bash = {
       enable = true;
       bashrcExtra = ''
@@ -104,15 +105,31 @@ in
          '';
       shellAliases = {
          b = "battery";
-         c = "clear";
          kali = "VBoxManage startvm Kali --type sdl";
          ls = "eza --icons";
          n = "nvim";
          p = "ping google.com -c 1";
-         ts = "tailscale";
          y = "yazi";
          nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
       };
+   };
+   programs.fish = {
+      enable = true;
+      shellInit = ''
+         string join 
+         (set_color green) (prompt_pwd)
+         (set_color --reset) ' >'
+         '';
+      shellAliases = {
+         b = "battery";
+         kali = "VBoxManage startvm Kali --type sdl";
+         ls = "eza --icons";
+         n = "nvim";
+         p = "ping google.com -c 1";
+         y = "yazi";
+         nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
+      };
+
    };
 
 # Function to assign config files

@@ -44,7 +44,7 @@ output "eDP-1" {
  layout {
     background-color "#272e33"
     // gaps around windows
-    gaps 5
+    gaps 0
     // never, always, on-overflow
     center-focused-column "never"
     preset-column-widths {
