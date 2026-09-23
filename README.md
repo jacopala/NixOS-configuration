@@ -1,12 +1,9 @@
 # NixOS setup for my laptop
 
-WM: Sway  
-editor: lazy nvim  
-files: yazi + ueberzugpp
-browser: firefox  
-notes: obsidian  
+WM: Niri
+Terminal: kitty
+Editor: Lazy NVim  
+File manager: Yazi
+Notes: Obsidian
 
-launcher: wofi  
-widgets (havent started): quickshell  
-
-larpcmd: pfetch  
+Launcher: Wofi 
