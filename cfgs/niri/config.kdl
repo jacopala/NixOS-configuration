@@ -182,7 +182,7 @@ output "eDP-1" {
     Mod+F repeat=false { maximize-column; }
     Mod+Shift+F repeat=false { fullscreen-window; }
     Mod+O repeat=false { toggle-overview; }
-    Mod+Q repeat=false hotkey-overlay-title="alacritty" { spawn "alacritty"; }
+    Mod+Q repeat=false hotkey-overlay-title="kitty" { spawn "kitty"; }
     Mod+R hotkey-overlay-title="fuzzel" { spawn "fuzzel"; }
     Mod+S { screenshot; }
     Mod+V repeat=false       { toggle-window-floating; }

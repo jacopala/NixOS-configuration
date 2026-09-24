@@ -6,7 +6,7 @@ set $down j
 set $up k
 set $right l
 
-set $term alacritty     # Terminal
+set $term kitty         # Terminal
 set $menu wofi          # Launcher
 set $lock swaylock      # Lockscreen
 

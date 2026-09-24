@@ -17,6 +17,10 @@ normal = { family = "Intone Mono NF", style = "Regular" }
 # Intone Mono NF
 size = 20
 
+[terminal.shell]
+program = "/run/current-system/sw/bin/fish"
+args = [ "-l" ]
+
 [colors.bright]
 black   = "#475258"
 red     = "#e67e80"

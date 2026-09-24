@@ -21,7 +21,7 @@ return {
          folder = "daily",
          date_format = "%m-%d-%Y",
          default_tags = { "daily" },
-         template = { "templates/Daily" },
+         template = "templates/Daily",
       },
       completion = {
          min_chars = 2,

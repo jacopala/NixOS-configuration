@@ -21,6 +21,7 @@ dirs = [
 	{ name = "Videos", text = "", fg = "blue" },
 
    { name = "LeetCode", text = "󰓎", fg = "yellow" },
+   { name = "Projects", text = "󰓎", fg = "yellow" },
    { name = "Obsidian", text = "󰌱", fg = "magenta" }
 ]
 conds = [

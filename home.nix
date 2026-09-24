@@ -9,6 +9,7 @@ configs = {
 #	use false if self-managed
    alacritty   = { sp = "alacritty";	r = true;  };
    fuzzel      = { sp = "fuzzel"; r = true; };
+   kitty       = { sp = "kitty"; r = true; };
    niri        = { sp = "niri"; r = true; };
    nvim 	      = { sp = "nvim";	r = false; };
    quickshell 	= { sp = "quickshell";	r = true;  };
@@ -23,6 +24,7 @@ in
 ## Applications
       alacritty       # Terminal 
       fuzzel          # Launcher
+      kitty           # Alt Terminal
       morgen          # Calendar
       obsidian        # Notes
       quickshell      # Widgets
@@ -47,7 +49,7 @@ in
       gh            # GitHub CLI
       leetgo        # LeetCode CLI
       nix-search    # Package repo search
-      pfetch        # System info
+      nerdfetch     # System info
       powertop      # Battery monitor
       ripgrep       # Better grep
       sutils        # Battery & Clock commands
@@ -74,10 +76,7 @@ in
       rustc          # Rust lang
    ];
 
-   programs.yazi = {
-      enable = true;
-      shellWrapperName = "yz";
-   };
+   programs.yazi.enable = true;
    programs.neovim = {
       enable = true;
       defaultEditor = true;
@@ -89,48 +88,13 @@ in
       enable = true;
       extraArgs = ["--no-cache"];
    };
-
+   programs.fish.enable = true;
 
 # Additional init
    home.username = "jacob";
    home.homeDirectory = "/home/jacob";
    programs.git.enable = true;
    home.stateVersion = "25.05";
-
-   programs.bash = {
-      enable = true;
-      bashrcExtra = ''
-         export PS1="\[\e[38;5;4m\]✦ \w\[\e[3m\]\n✨\[\e[0m\]"
-         export PATH="$HOME/NixOS/scripts/:$HOME/.cargo/bin:$PATH"  
-         '';
-      shellAliases = {
-         b = "battery";
-         kali = "VBoxManage startvm Kali --type sdl";
-         ls = "eza --icons";
-         n = "nvim";
-         p = "ping google.com -c 1";
-         y = "yazi";
-         nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
-      };
-   };
-   programs.fish = {
-      enable = true;
-      shellInit = ''
-         string join 
-         (set_color green) (prompt_pwd)
-         (set_color --reset) ' >'
-         '';
-      shellAliases = {
-         b = "battery";
-         kali = "VBoxManage startvm Kali --type sdl";
-         ls = "eza --icons";
-         n = "nvim";
-         p = "ping google.com -c 1";
-         y = "yazi";
-         nmtui="NEWT_COLORS=\"root=white,black\" sudo nmtui";
-      };
-
-   };
 
 # Function to assign config files
    xdg.configFile = builtins.mapAttrs 

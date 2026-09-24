@@ -111,7 +111,28 @@
       "vscode"
    ];
 
-### SYSTEM SETTINGS
+### SHELL
+   users.defaultUserShell = pkgs.fish;
+   environment.shellAliases = {
+      b = "battery";
+      kali = "VBoxManage startvm Kali --type sdl";
+      ls = "eza --icons";
+      n = "nvim";
+      p = "ping google.com -c 1";
+      y = "yazi";
+   };
+   programs = {
+      bash.enable = true;
+      fish.enable = true;
+   };
+
+### SYSTEM
+   users.users.jacob = {
+      isNormalUser = true;
+      extraGroups = [ "wheel" "vboxusers" ];
+      shell = pkgs.fish;
+   };
+
    imports =
       [
       ./hardware-configuration.nix
@@ -130,11 +151,6 @@
       };
    };
    time.timeZone = "America/Chicago";
-
-   users.users.jacob = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" "vboxusers" ];
-   };
 
    nix.settings.experimental-features = [ "nix-command" "flakes" ];
    system.stateVersion = "26.05";

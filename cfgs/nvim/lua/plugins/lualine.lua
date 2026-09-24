@@ -8,6 +8,9 @@ return {
          options = {
 -- https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
             theme = 'everforest',
+
+            compotnent_separators = { left = '◗', right = '◖' },
+            section_separators = { left = '◗', right = '◖' },
          },
       })
    end,

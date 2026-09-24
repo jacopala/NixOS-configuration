@@ -16,8 +16,14 @@ return {
       -- C-k: Signature help toggle
       -- :h blink-cmp-config-keymap for customization
 
-      completion = { documentation = { auto_show = true } },
-      sources = { default = { 'lsp', 'path', 'buffer' } },
+      completion = { 
+         documentation = { auto_show = true },
+         menu = {
+            auto_show = true,
+            auto_show_delay_ms = 500,
+         }
+      },
+      sources = { default = { 'lsp', 'path'  } },
       fuzzy = { implementation = "rust" }
    },
 }
