@@ -76,7 +76,10 @@ in
       rustc          # Rust lang
    ];
 
-   programs.yazi.enable = true;
+   programs.yazi = {
+      enable = true;
+      shellWrapperName = "y";
+   };
    programs.neovim = {
       enable = true;
       defaultEditor = true;

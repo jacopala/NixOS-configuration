@@ -123,7 +123,17 @@
    };
    programs = {
       bash.enable = true;
-      fish.enable = true;
+      fish = {
+         enable = true;
+         shellInit = ''
+            function fish_prompt
+               set_color green
+               echo (prompt_pwd)
+               set_color normal
+               echo -n " > "
+            end
+         '';
+      };
    };
 
 ### SYSTEM
