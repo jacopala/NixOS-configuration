@@ -27,7 +27,7 @@ in
       kitty           # Alt Terminal
       morgen          # Calendar
       obsidian        # Notes
-      plover          # Stenography
+      plover_5        # Stenography
       quickshell      # Widgets
       swaybg          # Wallpaper
       swaylock        # Sceen locker

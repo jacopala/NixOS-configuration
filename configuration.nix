@@ -79,6 +79,7 @@
 # System packages
    environment.systemPackages = with pkgs; [
          brightnessctl     # Brightness
+         ibus              # Input Bus
          pulseaudio        # Audio
          sox		# Audio utility
          wl-clipboard      # Clipboard ext.
