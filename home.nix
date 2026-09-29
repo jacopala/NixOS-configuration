@@ -27,6 +27,7 @@ in
       kitty           # Alt Terminal
       morgen          # Calendar
       obsidian        # Notes
+      plover          # Stenography
       quickshell      # Widgets
       swaybg          # Wallpaper
       swaylock        # Sceen locker
@@ -74,9 +75,6 @@ in
       python3        # Python3
       ruby           # Ruby lang
       rustc          # Rust lang
-
-      mysql84        # MySQL
-      mysql-shell    # CMD line shell
    ];
 
    programs.yazi = {
