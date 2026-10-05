@@ -41,23 +41,29 @@ in
       vlc             # Video/Audio player
 
 ## CLI
-      ast-grep      # Syntax grep
-      bluetui       # Bluetooth TUI
-      dragon-drop   # Drag files
-      htop          # Memory/process monitor
-      eza           # Better ls
-      fzf           # Fuzzy find
-      gh            # GitHub CLI
-      leetgo        # LeetCode CLI
-      nix-search    # Package repo search
-      nerdfetch     # System info
-      powertop      # Battery monitor
-      ripgrep       # Better grep
-      sutils        # Battery & Clock commands
-      tree-sitter   # Parser generator
-      ueberzugpp    # Images in terminal
-      weather       # Forecast
-      zoxide        # Better cd
+      ast-grep    # Syntax grep
+      bluetui     # Bluetooth TUI
+      dragon-drop # Drag files
+      htop        # Memory/process monitor
+      eza         # Better ls
+      fzf         # Fuzzy find
+      gh          # GitHub CLI
+      leetgo      # LeetCode CLI
+      nix-search  # Package repo search
+      nerdfetch   # System info
+      powertop    # Battery monitor
+      ripgrep     # Better grep
+      sutils      # Battery & Clock commands
+      tree-sitter # Parser generator
+      ueberzugpp  # Images in terminal
+      weather     # Forecast
+      zoxide      # Better cd
+
+## SECURITY
+      metasploit  # Exploit collection
+      nmap        # Network discovery
+      openvpn     # Tunneling
+      wireshark   # Network protocol analyzer
 
 ## LAZYGIT
       lazygit
@@ -73,6 +79,7 @@ in
       phpPackages.composer
 #pipx          # Isolated Python envs
       python3        # Python3
+      pipenv         # Python dev workflow
       ruby           # Ruby lang
       rustc          # Rust lang
    ];

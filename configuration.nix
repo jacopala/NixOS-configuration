@@ -51,6 +51,9 @@
 # Touchpad
    services.libinput.enable = true;
 
+# CUPS Printing
+   services.printing.enable = true;
+
 # Browser
    programs.firefox.enable = true;
 
@@ -78,10 +81,12 @@
 
 # System packages
    environment.systemPackages = with pkgs; [
+         google-chrome     # LDB prereq
+
          brightnessctl     # Brightness
          ibus              # Input Bus
          pulseaudio        # Audio
-         sox		# Audio utility
+         sox		         # Audio utility
          wl-clipboard      # Clipboard ext.
 
          auto-cpufreq      ## CPU/power optimizer
@@ -113,7 +118,9 @@
 
 # Allowed unfree/licensed packages
    nixpkgs.config.allowUnfreePackages = [
+      "google-chrome"
       "obsidian"
+      "osu-lazer-bin"
       "morgen"
       "vscode"
    ];
