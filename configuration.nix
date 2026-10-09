@@ -57,16 +57,8 @@
 # Browser
    programs.firefox.enable = true;
 
-# VSC
-   programs.vscode = {
-      enable = true;
-      extensions = with pkgs.vscode-extensions; [
-         prettier.prettier-vscode
-         ritwickdey.liveserver
-         vscodevim.vim
-         tomoki1207.pdf
-      ];
-   };
+# Steam
+   programs.steam.enable = true;
 
 # Tailscale
    services.tailscale.enable = true;
@@ -85,9 +77,10 @@
 
          brightnessctl     # Brightness
          ibus              # Input Bus
-         pulseaudio        # Audio
+         #pulseaudio        # Audio
          sox		         # Audio utility
          wl-clipboard      # Clipboard ext.
+         xwayland-satellite
 
          auto-cpufreq      ## CPU/power optimizer
 
@@ -108,12 +101,15 @@
 
 # Fonts
    fonts.fontDir.enable = true;
-   fonts.packages = with pkgs; [
-      nerd-fonts.departure-mono # pixelated, techy font
-         nerd-fonts.envy-code-r    # compact, rounded font
-         nerd-fonts.hurmit         # bulkier, modernistic font
-         nerd-fonts.intone-mono    # legible, standard font
-         nerd-fonts.symbols-only   # fallback symbol font for others
+   fonts.packages = with pkgs.nerd-fonts; [
+      intone-mono
+
+      hurmit
+      fantasque-sans-mono
+      lilex
+      monaspace
+
+      symbols-only   # fallback symbol font for others
    ];
 
 # Allowed unfree/licensed packages
@@ -121,7 +117,8 @@
       "google-chrome"
       "obsidian"
       "osu-lazer-bin"
-      "morgen"
+      "steam"
+      "steam-unwrapped"
       "vscode"
    ];
 

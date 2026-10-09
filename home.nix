@@ -7,7 +7,6 @@ configs = {
 # r  = recursively define
 #	use true if needs solid files
 #	use false if self-managed
-   alacritty   = { sp = "alacritty";	r = true;  };
    fuzzel      = { sp = "fuzzel"; r = true; };
    kitty       = { sp = "kitty"; r = true; };
    niri        = { sp = "niri"; r = true; };
@@ -22,11 +21,10 @@ in
 # User specific packages
    home.packages = with pkgs; [
 ## Applications
-      alacritty       # Terminal 
       fuzzel          # Launcher
-      kitty           # Alt Terminal
-      morgen          # Calendar
+      kitty           # Terminal
       obsidian        # Notes
+      osu-lazer-bin   # Osu game
       plover_5        # Stenography
       quickshell      # Widgets
       swaybg          # Wallpaper
@@ -100,6 +98,21 @@ in
       extraArgs = ["--no-cache"];
    };
    programs.fish.enable = true;
+
+   # VSC
+   programs.vscode = {
+      enable = true;
+      profiles.default.extensions = with pkgs.vscode-extensions; [
+         prettier.prettier-vscode
+         ritwickdey.liveserver
+         vscodevim.vim
+         tomoki1207.pdf
+         ms-python.python
+         ms-python.debugpy
+         batisteo.vscode-django
+         #kevinrose.vsc-python-indent
+      ];
+   };
 
 # Additional init
    home.username = "jacob";
