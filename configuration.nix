@@ -73,14 +73,16 @@
 
 # System packages
    environment.systemPackages = with pkgs; [
-         google-chrome     # LDB prereq
+         google-chrome     # for LDB
 
          brightnessctl     # Brightness
+         ffmpeg            # AV streaming
          ibus              # Input Bus
          #pulseaudio        # Audio
          sox		         # Audio utility
          wl-clipboard      # Clipboard ext.
          xwayland-satellite
+         zip               # compression
 
          auto-cpufreq      ## CPU/power optimizer
 

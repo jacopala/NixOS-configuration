@@ -12,11 +12,13 @@ input {
     }
     touchpad {
         // tap // disable tap to click
-        dwt  // disable while typing
+        //dwt  // disable while typing
         dwtp // disable while trackpoint
         disabled-on-external-mouse
     }
-    mouse {}
+    mouse {
+       accel-profile "flat"
+    }
     trackpoint {}
 
     warp-mouse-to-focus // mouse on focused window

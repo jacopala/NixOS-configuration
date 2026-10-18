@@ -22,6 +22,7 @@ in
    home.packages = with pkgs; [
 ## Applications
       fuzzel          # Launcher
+      gimp            # Image editing
       kitty           # Terminal
       obsidian        # Notes
       osu-lazer-bin   # Osu game
@@ -32,10 +33,10 @@ in
       vesktop         # Discord alt client
 
 ## Media
-      calibre         # EPUB reader
+      #calibre         # EPUB reader
       cheese          # Camera
       thunar          # GUI file manager (backup)
-      zathura         # PDF reader
+      #zathura         # PDF reader
       vlc             # Video/Audio player
 
 ## CLI
@@ -55,6 +56,7 @@ in
       tree-sitter # Parser generator
       ueberzugpp  # Images in terminal
       weather     # Forecast
+      yt-dlp-light# Youtube video downloading
       zoxide      # Better cd
 
 ## SECURITY

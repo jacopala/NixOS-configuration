@@ -16,14 +16,15 @@ PanelWindow {
    property string fontFamily: "FantasqueSansM Nerd Font"
    property int fontSize: 15
 
+   property var diskUsage: 0
+
+   property int memUsage: 0
+
    property int cpuUsage: 0
    property var lastCpuIdle: 0
    property var lastCpuTotal: 0
-   property int memUsage: 0
+
    property int batLeft: 0
-   property var curVolume: -1
-   property int curBright: 0
-   property int maxBright: 65535
 
    // CPU measurements
    Process {
@@ -39,6 +40,18 @@ PanelWindow {
             }
             lastCpuTotal = total
             lastCpuIdle = idle
+         }
+      }
+      Component.onCompleted: running = true
+   }
+   // Disk measurements
+   Process {
+      id: diskProc
+      command: ["sh", "-c", "df -h | grep nvme0n1p3"]
+      stdout: SplitParser {
+         onRead: data => {
+            var p = data.trim().split(/\s+/)
+            diskUsage = p[4]
          }
       }
       Component.onCompleted: running = true
@@ -68,38 +81,16 @@ PanelWindow {
       }
       Component.onCompleted: running = true
    }
-   // Volume measurements (WIP)
-   Process {
-      id: volProc
-      command: ["pactl", "get-sink-volume @DEFAULT_SINK@ | sed 's/^[^\/]*//g' | cut -c 4-6"]
-      stdout: SplitParser {
-         onRead: data => {
-            curVolume = data
-         }
-      }
-      Component.onCompleted: running = true
-   }
-   // Brightness measurements
-   Process {
-      id: brightProc
-      command: ["brightnessctl", "g"]
-      stdout: SplitParser {
-         onRead: data => {
-            curBright = (data/maxBright)*100
-         }
-      }
-      Component.onCompleted: running = true
-   }
+
    Timer {
       interval: 5000
       running: true
       repeat: true
       onTriggered: {
-         cpuProc.running = true
+         diskProc.running = true
          memProc.running = true
+         cpuProc.running = true
          batProc.running = true
-         volProc.running = true
-         brightProc.running = true
       }
    }
 
@@ -133,29 +124,29 @@ PanelWindow {
       Item { Layout.fillWidth: true }
 
       Text {
-         id: brightness
-         text: "Br: " + curBright + "%" + "  | "
+         id: disk
+         text: "  " + diskUsage + "  | "
          color: root.primary
          font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
       }
 
       Text {
          id: memory
-         text: "Mem: " + memUsage + "%" + "  | "
+         text: "  " + memUsage + "%" + "  | "
          color: root.secondary
          font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
       }
 
       Text {
          id: cpu
-         text: "CPU: " + cpuUsage + "%" + "  | "
+         text: "  " + cpuUsage + "%" + "  | "
          color: root.tertiary
          font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
       }
 
       Text {
          id: battery
-         text: "Bat: " + batLeft + "%"
+         text: "  " + batLeft + "%"
          color: root.quaternary
          font { family: root.fontFamily; pixelSize: root.fontSize; bold: true }
       }

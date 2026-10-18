@@ -3,6 +3,8 @@ require("config.lazy")
 vim.lsp.enable({"lua_ls", "ts_ls", "rust_analyzer"})
 
 vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.ignorecase = true
 -- tab space
 vim.opt.tabstop = 3
 vim.opt.shiftwidth = 3
