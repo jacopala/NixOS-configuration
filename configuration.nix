@@ -17,6 +17,7 @@
 # Compositors/Window Managers
    programs.sway.enable = true;
    programs.niri.enable = true;
+   services.desktopManager.plasma6.enable = true;
 
 # Cron Jobs
    services.cron = {
@@ -36,37 +37,44 @@
       ];
    };
 
-# Pipewire audio
+   # Pipewire audio
    services.pipewire = {
       enable = true;
       pulse.enable = true;
+   };
+
+   services = {
+      # Touchpad
+      libinput.enable = true;
+
+      # CUPS Printing
+      printing.enable = true;
+
+      # Tailscale
+      tailscale.enable = true;
+   };
+
+   programs = {
+   # Browser
+      firefox.enable = true;
+
+   # Steam
+      steam.enable = true;
+
+   # Browser
+      npm.enable = true;
+   };
+
+# Bluetooth
+   hardware.bluetooth = {
+      enable = true;
+      powerOnBoot = false;
    };
 
 # VirtualBox
    virtualisation.virtualbox.host = {
       enable = true;
       headless = false;
-   };
-
-# Touchpad
-   services.libinput.enable = true;
-
-# CUPS Printing
-   services.printing.enable = true;
-
-# Browser
-   programs.firefox.enable = true;
-
-# Steam
-   programs.steam.enable = true;
-
-# Tailscale
-   services.tailscale.enable = true;
-
-# Bluetooth
-   hardware.bluetooth = {
-      enable = true;
-      powerOnBoot = false;
    };
 
 ### SYSTEM PACKAGES
@@ -128,6 +136,7 @@
    users.defaultUserShell = pkgs.fish;
    environment.shellAliases = {
       b = "battery";
+      bye = "exit";
       kali = "VBoxManage startvm Kali --type sdl";
       ls = "eza --icons";
       n = "nvim";

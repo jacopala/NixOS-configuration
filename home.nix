@@ -33,10 +33,8 @@ in
       vesktop         # Discord alt client
 
 ## Media
-      #calibre         # EPUB reader
       cheese          # Camera
       thunar          # GUI file manager (backup)
-      #zathura         # PDF reader
       vlc             # Video/Audio player
 
 ## CLI
@@ -44,22 +42,28 @@ in
       bluetui     # Bluetooth TUI
       dragon-drop # Drag files
       htop        # Memory/process monitor
-      eza         # Better ls
+      gcalcli     # Google Calendar in CLI
       fzf         # Fuzzy find
       gh          # GitHub CLI
       leetgo      # LeetCode CLI
       nix-search  # Package repo search
       nerdfetch   # System info
       powertop    # Battery monitor
-      ripgrep     # Better grep
       sutils      # Battery & Clock commands
       tree-sitter # Parser generator
       ueberzugpp  # Images in terminal
       weather     # Forecast
       yt-dlp-light# Youtube video downloading
+
+      bat         # Better cat
+      eza         # Better ls
+      ripgrep     # Better grep
+      tldr        # Better man
       zoxide      # Better cd
 
+
 ## SECURITY
+      gobuster    # Brute-force tool
       metasploit  # Exploit collection
       nmap        # Network discovery
       openvpn     # Tunneling
