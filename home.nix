@@ -25,8 +25,9 @@ in
       gimp            # Image editing
       kitty           # Terminal
       obsidian        # Notes
-      osu-lazer-bin   # Osu game
-      plover_5        # Stenography
+      osu-lazer-bin   # Osu
+      #plover_5        # Stenography
+      prismlauncher   # Minecraft
       quickshell      # Widgets
       swaybg          # Wallpaper
       swaylock        # Sceen locker

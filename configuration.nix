@@ -15,7 +15,7 @@
    #services.gnome.gnome-software.enable = true;
 
 # Compositors/Window Managers
-   programs.sway.enable = true;
+   #programs.sway.enable = true;
    programs.niri.enable = true;
    services.desktopManager.plasma6.enable = true;
 
@@ -86,6 +86,7 @@
          brightnessctl     # Brightness
          ffmpeg            # AV streaming
          ibus              # Input Bus
+         inetutils         # net utilities (ftp)
          #pulseaudio        # Audio
          sox		         # Audio utility
          wl-clipboard      # Clipboard ext.
