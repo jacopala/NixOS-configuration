@@ -41,6 +41,7 @@ in
 ## CLI
       ast-grep    # Syntax grep
       bluetui     # Bluetooth TUI
+      calc        # Quick calc
       dragon-drop # Drag files
       htop        # Memory/process monitor
       gcalcli     # Google Calendar in CLI

@@ -83,6 +83,7 @@
    environment.systemPackages = with pkgs; [
          google-chrome     # for LDB
 
+         busybox           # UNIX utils
          brightnessctl     # Brightness
          ffmpeg            # AV streaming
          ibus              # Input Bus
@@ -141,7 +142,7 @@
       kali = "VBoxManage startvm Kali --type sdl";
       ls = "eza --icons";
       n = "nvim";
-      p = "ping google.com -c 1";
+      p = "ping google.com -c 1 2&> /dev/null; echo $status | sed 's/0/Connected/' | sed 's/2/Not Connected/'";
       y = "yazi";
    };
    programs = {

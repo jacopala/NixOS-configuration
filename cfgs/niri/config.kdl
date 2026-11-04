@@ -181,6 +181,7 @@ output "eDP-1" {
 
     Super+Escape hotkey-overlay-title="swaylock" { spawn "swaylock"; }
     Mod+C repeat=false { close-window; }
+    Mod+E repeat=false { spawn "thunar"; }
     Mod+F repeat=false { maximize-column; }
     Mod+Shift+F repeat=false { fullscreen-window; }
     Mod+O repeat=false { toggle-overview; }
