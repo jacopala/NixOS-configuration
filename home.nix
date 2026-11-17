@@ -9,11 +9,11 @@ configs = {
 #	use false if self-managed
    fuzzel      = { sp = "fuzzel"; r = true; };
    kitty       = { sp = "kitty"; r = true; };
+   mako        = { sp = "mako";	r = true;  };
    niri        = { sp = "niri"; r = true; };
    nvim 	      = { sp = "nvim";	r = false; };
    quickshell 	= { sp = "quickshell";	r = true;  };
    sway 	      = { sp = "sway";	r = true;  };
-   swaylock 	= { sp = "swaylock";	r = true;  };
    yazi 	      = { sp = "yazi";	r = false; };
 };
 in
@@ -21,21 +21,26 @@ in
 # User specific packages
    home.packages = with pkgs; [
 ## Applications
+      claude-code
+      code-cursor     # Code editor
+      floorp-bin      # Firefox fork
       fuzzel          # Launcher
       gimp            # Image editing
       kitty           # Terminal
       obsidian        # Notes
+      olympus         # Celeste mod loader
       osu-lazer-bin   # Osu
       #plover_5        # Stenography
       prismlauncher   # Minecraft
       quickshell      # Widgets
       swaybg          # Wallpaper
       swaylock        # Sceen locker
+      trayscale       # Tailscale GUI wrapper
       vesktop         # Discord alt client
 
 ## Media
       cheese          # Camera
-      thunar          # GUI file manager (backup)
+      kdePackages.dolphin   # GUI file manager
       vlc             # Video/Audio player
 
 ## CLI
@@ -45,6 +50,7 @@ in
       dragon-drop # Drag files
       htop        # Memory/process monitor
       gcalcli     # Google Calendar in CLI
+      feh         # Simple image viewer
       fzf         # Fuzzy find
       gh          # GitHub CLI
       leetgo      # LeetCode CLI
@@ -71,8 +77,9 @@ in
       openvpn     # Tunneling
       wireshark   # Network protocol analyzer
 
-## LAZYGIT
+## temp
       lazygit
+      mars-mips
 
 ## LANGS
       cargo          # Rust builder
@@ -88,6 +95,7 @@ in
       pipenv         # Python dev workflow
       ruby           # Ruby lang
       rustc          # Rust lang
+      uv
    ];
 
    programs.yazi = {

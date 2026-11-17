@@ -37,13 +37,14 @@
       ];
    };
 
-   # Pipewire audio
-   services.pipewire = {
-      enable = true;
-      pulse.enable = true;
-   };
 
    services = {
+
+      # Pipewire audio
+      pipewire = {
+         enable = true;
+         pulse.enable = true;
+      };
       # Touchpad
       libinput.enable = true;
 
@@ -52,6 +53,9 @@
 
       # Tailscale
       tailscale.enable = true;
+
+      # MullvadVPN
+      mullvad-vpn.enable = true;
    };
 
    programs = {
@@ -88,6 +92,7 @@
          ffmpeg            # AV streaming
          ibus              # Input Bus
          inetutils         # net utilities (ftp)
+         mako              # notification daemon
          #pulseaudio        # Audio
          sox		         # Audio utility
          wl-clipboard      # Clipboard ext.
@@ -126,6 +131,8 @@
 
 # Allowed unfree/licensed packages
    nixpkgs.config.allowUnfreePackages = [
+      "claude-code"
+      "cursor"
       "google-chrome"
       "obsidian"
       "osu-lazer-bin"

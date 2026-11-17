@@ -1,0 +1,12 @@
+background-color=#374145
+text-color=#d3c6aa
+border-color=#3c4841
+progress-color=over #a7c080
+
+icons=1
+icon-path=/run/current-system/sw/share/icons
+
+actions=1
+
+default-timeout=3000
+max-visible=5

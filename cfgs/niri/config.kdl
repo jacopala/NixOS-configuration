@@ -66,16 +66,16 @@ output "eDP-1" {
        off
 
        width 1
-       // active-color "#7fc8ff"
-       inactive-color "#505050"
-       active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+       active-color "#a7c080"
+       //inactive-color "#505050"
+       //active-gradient from="#80c8ff" to="#c7ff7f" angle=45
        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     border {
        off
 
-       width 4
+       width 2
        active-color "#ffc87f"
        inactive-color "#505050"
        urgent-color "#9b0000"
@@ -181,13 +181,13 @@ output "eDP-1" {
 
     Super+Escape hotkey-overlay-title="swaylock" { spawn "swaylock"; }
     Mod+C repeat=false { close-window; }
-    Mod+E repeat=false { spawn "thunar"; }
+    Mod+E repeat=false { spawn "dolphin"; }
     Mod+F repeat=false { maximize-column; }
     Mod+Shift+F repeat=false { fullscreen-window; }
     Mod+O repeat=false { toggle-overview; }
     Mod+Shift+O repeat=false hotkey-overlay-title="obsidian" { spawn "obsidian"; }
     Mod+Q repeat=false hotkey-overlay-title="kitty" { spawn "kitty"; }
-    Mod+B repeat=false hotkey-overlay-title="firefox" { spawn "firefox"; }
+    Mod+B repeat=false hotkey-overlay-title="floorp" { spawn "floorp"; }
     Mod+R hotkey-overlay-title="fuzzel" { spawn "fuzzel"; }
     Mod+S { screenshot; }
     Mod+V repeat=false       { toggle-window-floating; }
