@@ -1,9 +1,14 @@
 [[mgr.prepend_keymap]]
 on = [ "g", "c" ]
 run = "cd ~/NixOS/cfgs/"
-desc = "Go to dotfiles"
+desc = "Go Config"
 
 [[mgr.prepend_keymap]]
 on = [ "g", "o" ]
 run = "cd ~/Obsidian/"
-desc = "Go to Obsidian"
+desc = "Go Obsidian"
+
+[[mgr.prepend_keymap]]
+on = [ "g", "s" ]
+run = "cd ~/School"
+desc = "Go School"

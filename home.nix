@@ -3,26 +3,26 @@ let
 dotfiles = "/home/jacob/NixOS/cfgs";
 create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
 configs = {
-# sp = subpath in ./cfgs
-# r  = recursively define
-#	use true if needs solid files
-#	use false if self-managed
-   fuzzel      = { sp = "fuzzel"; r = true; };
-   kitty       = { sp = "kitty"; r = true; };
-   mako        = { sp = "mako";	r = true;  };
-   niri        = { sp = "niri"; r = true; };
-   nvim 	      = { sp = "nvim";	r = false; };
-   quickshell 	= { sp = "quickshell";	r = true;  };
-   sway 	      = { sp = "sway";	r = true;  };
-   yazi 	      = { sp = "yazi";	r = false; };
+	# sp = subpath in ./cfgs
+	# r  = recursively define
+	#	use true if needs solid files
+	#	use false if self-managed
+	fuzzel      = { sp = "fuzzel"; r = true; };
+	kitty       = { sp = "kitty"; r = true; };
+	mako        = { sp = "mako";	r = true;  };
+	niri        = { sp = "niri"; r = true; };
+	nvim 	      = { sp = "nvim";	r = false; };
+	quickshell 	= { sp = "quickshell";	r = true;  };
+	sway 	      = { sp = "sway";	r = true;  };
+	yazi 	      = { sp = "yazi";	r = false; };
 };
 in
 {
-# User specific packages
-   home.packages = with pkgs; [
-## Applications
-      claude-code
+	# User specific packages
+	home.packages = with pkgs; [
+	## Applications
       code-cursor     # Code editor
+      finamp		    # Jellyfin Music
       floorp-bin      # Firefox fork
       fuzzel          # Launcher
       gimp            # Image editing
@@ -38,12 +38,15 @@ in
       trayscale       # Tailscale GUI wrapper
       vesktop         # Discord alt client
 
-## Media
+      opencode
+      ollama
+
+      ## Media
       cheese          # Camera
       kdePackages.dolphin   # GUI file manager
       vlc             # Video/Audio player
 
-## CLI
+      ## CLI
       ast-grep    # Syntax grep
       bluetui     # Bluetooth TUI
       calc        # Quick calc
@@ -95,51 +98,51 @@ in
       pipenv         # Python dev workflow
       ruby           # Ruby lang
       rustc          # Rust lang
-      uv
-   ];
+      uv             # Python package installer
+      ];
 
-   programs.yazi = {
-      enable = true;
-      shellWrapperName = "y";
-   };
-   programs.neovim = {
-      enable = true;
-      defaultEditor = true;
-      withPython3 = true;
-      withRuby = true;
-      sideloadInitLua = true;
-   };
-   services.awww = {
-      enable = true;
-      extraArgs = ["--no-cache"];
-   };
-   programs.fish.enable = true;
+	programs.yazi = {
+		enable = true;
+		shellWrapperName = "y";
+	};
+	programs.neovim = {
+		enable = true;
+		defaultEditor = true;
+		withPython3 = true;
+		withRuby = true;
+		sideloadInitLua = true;
+	};
+	services.awww = {
+		enable = true;
+		extraArgs = ["--no-cache"];
+	};
+	programs.fish.enable = true;
 
-   # VSC
-   programs.vscode = {
-      enable = true;
-      profiles.default.extensions = with pkgs.vscode-extensions; [
-         prettier.prettier-vscode
+# VSC
+	programs.vscode = {
+		enable = true;
+		profiles.default.extensions = with pkgs.vscode-extensions; [
+			prettier.prettier-vscode
          ritwickdey.liveserver
          vscodevim.vim
          tomoki1207.pdf
          ms-python.python
          ms-python.debugpy
          batisteo.vscode-django
-         #kevinrose.vsc-python-indent
-      ];
-   };
+         slevesque.shader
+		];
+	};
 
 # Additional init
-   home.username = "jacob";
-   home.homeDirectory = "/home/jacob";
-   programs.git.enable = true;
-   home.stateVersion = "25.05";
+	home.username = "jacob";
+	home.homeDirectory = "/home/jacob";
+	programs.git.enable = true;
+	home.stateVersion = "25.05";
 
 # Function to assign config files
-   xdg.configFile = builtins.mapAttrs 
-      (name: cfg: {
-       source = create_symlink "${dotfiles}/${cfg.sp}";
-       recursive = cfg.r;
-       }) configs;
+	xdg.configFile = builtins.mapAttrs 
+		(name: cfg: {
+		 source = create_symlink "${dotfiles}/${cfg.sp}";
+		 recursive = cfg.r;
+		 }) configs;
 }
