@@ -47,6 +47,7 @@ in
       vlc             # Video/Audio player
 
       ## CLI
+      appimage-run
       ast-grep    # Syntax grep
       bluetui     # Bluetooth TUI
       calc        # Quick calc
@@ -129,7 +130,7 @@ in
          ms-python.python
          ms-python.debugpy
          batisteo.vscode-django
-         slevesque.shader
+         #slevesque.shader
 		];
 	};
 

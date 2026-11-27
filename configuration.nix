@@ -65,8 +65,9 @@
    # Steam
       steam.enable = true;
 
-   # Browser
       npm.enable = true;
+
+      git.enable = true;
    };
 
 # Bluetooth
@@ -103,7 +104,7 @@
 
          file              ## File details (idk why this isnt default)
          gcc               ## C-lang compiler
-         git            ## Github + version control
+         #git            ## Github + version control
          pkg-config     ## Packages can find information about other packages
          unzip          ## Decompressor
          wget           ## Network downloader
